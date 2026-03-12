@@ -96,7 +96,10 @@ export default function HabitationPage() {
           casser inutilement les sols ou les murs.
         </p>
         <p className="text-blue-200 text-sm mb-6">
-          Certaines infiltrations peuvent également provenir d&apos;une toiture terrasse
+          Certaines infiltrations peuvent également provenir d&apos;une{" "}
+          <Link href="/recherche-fuite-terrasse-lyon" className="underline hover:text-white transition-colors">
+            toiture terrasse
+          </Link>{" "}
           ou d&apos;un toit plat.
         </p>
         <div className="flex flex-wrap gap-2 mb-8">
@@ -191,8 +194,10 @@ export default function HabitationPage() {
           </div>
           <FadeIn delay={0.3}>
             <p className="text-gray-500 text-sm mt-6">
-              Certaines traces d&apos;humidité peuvent également provenir d&apos;une
-              infiltration par une toiture ou une terrasse.
+              Certaines traces d&apos;humidité peuvent également provenir d&apos;une{" "}
+              <Link href="/recherche-fuite-terrasse-lyon" className="text-primary hover:underline">
+                infiltration par une toiture ou une terrasse
+              </Link>.
             </p>
           </FadeIn>
         </div>

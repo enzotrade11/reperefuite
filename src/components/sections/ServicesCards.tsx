@@ -69,8 +69,11 @@ export default function ServicesCards() {
 
         <FadeIn delay={0.3}>
           <p className="text-center text-gray-500 mt-8 text-sm">
-            RepereFuite intervient également pour le diagnostic d&apos;infiltration
-            provenant d&apos;une toiture terrasse ou d&apos;un toit plat.
+            RepereFuite intervient également pour le{" "}
+            <Link href="/recherche-fuite-terrasse-lyon" className="text-primary hover:underline font-medium">
+              diagnostic d&apos;infiltration provenant d&apos;une toiture terrasse
+            </Link>{" "}
+            ou d&apos;un toit plat.
           </p>
         </FadeIn>
       </div>

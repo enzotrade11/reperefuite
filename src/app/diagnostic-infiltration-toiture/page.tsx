@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { Droplets, Home, FileText, MapPin } from 'lucide-react'
 import Breadcrumbs from '@/components/layout/Breadcrumbs'
 import FAQ from '@/components/sections/FAQ'
@@ -65,13 +66,19 @@ export default function InfiltrationToiturePage() {
         <h1 className="font-sora text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
           Recherche de fuite et diagnostic infiltration toiture terrasse
         </h1>
-        <p className="text-lg text-blue-100 leading-relaxed mb-8">
+        <p className="text-lg text-blue-100 leading-relaxed mb-6">
           Une infiltration d&apos;eau provenant d&apos;une toiture ou d&apos;une terrasse
           peut provoquer l&apos;apparition d&apos;humidité dans une habitation. Ces
           infiltrations peuvent entraîner des taches au plafond, des murs humides
           ou des dégradations dans certaines pièces. RepereFuite intervient pour
           rechercher l&apos;origine des infiltrations d&apos;eau afin d&apos;identifier
           précisément la cause du problème.
+        </p>
+        <p className="text-blue-200 text-sm mb-8 italic">
+          Vous résidez dans la région lyonnaise ? Découvrez notre service dédié à la{" "}
+          <Link href="/recherche-fuite-terrasse-lyon" className="underline hover:text-white transition-colors">
+            recherche de fuite terrasse Lyon
+          </Link>.
         </p>
         <div className="flex flex-wrap gap-4">
           <Button href={siteConfig.phoneTel} variant="accent" size="lg">

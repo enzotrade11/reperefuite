@@ -9,6 +9,7 @@ const serviceLinks = [
   { label: 'Recherche fuite réseau enterré', href: '/recherche-fuite-reseau-enterre' },
   { label: 'Diagnostic humidité', href: '/diagnostic-humidite' },
   { label: 'Infiltration toiture terrasse', href: '/diagnostic-infiltration-toiture' },
+  { label: 'Recherche fuite terrasse Lyon', href: '/recherche-fuite-terrasse-lyon' },
   { label: 'Méthodes de détection', href: '/methodes-recherche-fuite' },
 ]
 

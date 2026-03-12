@@ -40,7 +40,14 @@ export const siteConfig = {
 
 export const navLinks = [
   { label: "Accueil", href: "/" },
-  { label: "Habitation", href: "/recherche-fuite-habitation" },
+  { 
+    label: "Habitation", 
+    href: "/recherche-fuite-habitation",
+    dropdown: [
+      { label: "Recherche de fuite habitation", href: "/recherche-fuite-habitation" },
+      { label: "Infiltration toiture terrasse", href: "/recherche-fuite-terrasse-lyon" },
+    ]
+  },
   { label: "Piscine", href: "/recherche-fuite-piscine" },
   { label: "Réseau enterré", href: "/recherche-fuite-reseau-enterre" },
   { label: "Humidité", href: "/diagnostic-humidite" },
