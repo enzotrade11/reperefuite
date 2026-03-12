@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev -p $PORT",
     "build": "next build",
-    "start": "next start",
-    "postbuild": "next-sitemap"
+    "start": "next start"
   },
   "dependencies": {
     "framer-motion": "^11.0.0",
@@ -20,7 +19,6 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.20",
-    "next-sitemap": "^4.2.3",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
     "typescript": "^5"
