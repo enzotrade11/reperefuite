@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, Mail, MapPin, Droplets } from 'lucide-react'
 import { siteConfig } from '@/data/siteConfig'
 
@@ -20,10 +21,15 @@ export default function Footer() {
           {/* Col 1 */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Droplets className="w-6 h-6 text-secondary" />
-              <span className="font-sora text-xl font-bold text-white">
-                {siteConfig.name}
-              </span>
+              <Link href="/">
+                <Image
+                  src="/images/logo-reperefuite.png"
+                  alt="RepereFuite"
+                  width={270}
+                  height={75}
+                  className="h-16 w-auto"
+                />
+              </Link>
             </div>
             <p className="text-lg font-semibold text-white mb-1">
               {siteConfig.tagline}

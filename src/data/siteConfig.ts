@@ -7,7 +7,7 @@ export const siteConfig = {
   phone: "0785432408",
   phoneDisplay: "07 85 43 24 08",
   phoneTel: "tel:0785432408",
-  email: "contact@reperefuite.fr",
+  email: "reperefuite@gmail.com",
   zone: "Est lyonnais – Nord Isère – Sud Ain",
   zoneDetail:
     "Intervention dans un rayon d'environ 50 km autour de Lyon Est.",
@@ -40,7 +40,14 @@ export const siteConfig = {
 
 export const navLinks = [
   { label: "Accueil", href: "/" },
-  { label: "Habitation", href: "/recherche-fuite-habitation" },
+  { 
+    label: "Habitation", 
+    href: "/recherche-fuite-habitation",
+    dropdown: [
+      { label: "Recherche de fuite habitation", href: "/recherche-fuite-habitation" },
+      { label: "Infiltration toiture terrasse", href: "/recherche-fuite-terrasse-lyon" },
+    ]
+  },
   { label: "Piscine", href: "/recherche-fuite-piscine" },
   { label: "Réseau enterré", href: "/recherche-fuite-reseau-enterre" },
   { label: "Humidité", href: "/diagnostic-humidite" },

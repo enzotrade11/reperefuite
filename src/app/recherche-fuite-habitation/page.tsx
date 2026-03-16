@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle2, ArrowRight, Droplets, Gauge, Home, Eye, Wrench, MapPin, FileText } from 'lucide-react'
+import { CheckCircle2, ArrowRight, Droplets, Gauge, Home, Eye, Wrench, MapPin, FileText, Camera, Thermometer, Info } from 'lucide-react'
 import Breadcrumbs from '@/components/layout/Breadcrumbs'
 import FAQ from '@/components/sections/FAQ'
 import CTABanner from '@/components/sections/CTABanner'
@@ -13,100 +13,82 @@ import Button from '@/components/ui/Button'
 import { siteConfig } from '@/data/siteConfig'
 
 export const metadata: Metadata = {
-  title: 'Recherche de fuite habitation sans destruction – RepereFuite Lyon Est',
+  title: "Recherche de Fuite Habitation Lyon | Sans Destruction | Répère Fuite",
   description:
-    "Recherche de fuite habitation sans destruction dans l'Est lyonnais. Localisation de fuite sur canalisation, fuite sous dalle, infiltration. RepereFuite.",
-  alternates: { canonical: 'https://reperefuite.fr/recherche-fuite-habitation' },
-}
+    "Fuite d'eau dans votre maison ou appartement à Lyon ? Répère Fuite détecte l'origine de l'infiltration sans casser. Intervention rapide dans l'Est Lyonnais et alentours.",
+  alternates: {
+    canonical: "https://reperefuite.fr/recherche-fuite-habitation",
+  },
+};
 
 const faqItems = [
   {
-    question: "Comment savoir s'il y a une fuite dans une maison ?",
+    question: "Comment savoir s'il y a une fuite invisible dans ma maison ?",
     answer:
-      "Certains signes peuvent indiquer une fuite d'eau : compteur qui tourne sans consommation, humidité sur un mur, infiltration d'eau ou augmentation anormale de la consommation.",
+      "Plusieurs signes peuvent vous alerter : un compteur d'eau qui tourne alors que tous les robinets sont fermés (la nuit par exemple), l'apparition de taches d'humidité sur les murs ou plafonds, un décollement de papier peint, des moisissures, ou encore une facture d'eau anormalement élevée. En cas de doute, la première étape est de vérifier votre compteur.",
   },
   {
-    question: 'Peut-on localiser une fuite sans casser ?',
+    question: "Faut-il casser le sol ou les murs pour localiser la fuite ?",
     answer:
-      'Oui. Des méthodes de détection comme la détection acoustique ou le gaz traceur permettent souvent de localiser précisément une fuite sans destruction.',
+      "Non, c'est tout l'intérêt de la recherche de fuite non destructive ! Grâce à nos équipements de pointe (gaz traceur, détection acoustique, caméra thermique), nous pouvons repérer avec précision l'origine de la fuite à travers le carrelage, les dalles béton ou les murs sans aucune démolition préalable.",
   },
   {
-    question: 'Combien coûte une recherche de fuite ?',
+    question: "Est-ce que l'intervention est prise en charge par mon assurance ?",
     answer:
-      "Le tarif dépend de la configuration de l'installation et de la complexité de la recherche. Un diagnostic permet d'identifier précisément l'origine du problème.",
+      "Oui, dans la majorité des cas, votre assurance multirisque habitation (MRH) prend en charge la facture de la recherche de fuite, notamment via la garantie 'Dégâts des eaux'. À l'issue de notre intervention, nous vous remettons un rapport détaillé, avec photos, conçu spécifiquement pour faciliter vos démarches auprès de votre assureur.",
   },
-]
+  {
+    question: "Où intervenez-vous pour une recherche de fuite habitation ?",
+    answer:
+      "Nous couvrons l'ensemble de la région lyonnaise, avec une forte réactivité sur l'Est Lyonnais (Villeurbanne, Bron, Meyzieu, Décines, Vaulx-en-Velin), le Nord-Isère (Bourgoin-Jallieu) et le Sud de l'Ain. Nous pouvons également intervenir dans tout l'agglomération de Lyon.",
+  },
+  {
+    question: "Combien coûte une recherche de fuite dans une maison ?",
+    answer:
+      "Le tarif varie en fonction de la complexité du réseau (intérieur, extérieur, enterré) et de l'étendue de la recherche. Cependant, un diagnostic professionnel précis vous fera toujours économiser des milliers d'euros de travaux inutiles. Contactez-nous pour obtenir un devis personnalisé très rapidement.",
+  },
+  {
+    question: "Dans quels types d'habitations intervenez-vous ?",
+    answer:
+      "Nous agissons aussi bien dans les maisons individuelles (fuites sous dalle, réseaux extérieurs, sanitaires, piscines) que les appartements (fuites encastrées, colonnes montantes) ou les copropriétés entières.",
+  },
+];
 
 const tags = [
-  'fuite sur canalisation intérieure',
-  'fuite sous dalle',
-  'infiltration dans un mur ou un plafond',
-  "fuite invisible dans une installation d'eau",
-  "compteur d'eau qui tourne sans consommation",
-]
-
-const situations = [
-  { icon: Gauge, text: "Compteur d'eau qui tourne sans consommation" },
-  { icon: Droplets, text: "Tache d'humidité sur un mur" },
-  { icon: Home, text: "Infiltration d'eau dans une pièce" },
-  { icon: Eye, text: 'Fuite sous dalle' },
-  { icon: Droplets, text: "Augmentation anormale de la consommation d'eau" },
-]
-
-const emplacements = [
-  "Canalisation d'eau potable",
-  'Réseau situé sous la dalle',
-  'Canalisation dans un mur',
-  'Réseau extérieur alimentant la maison',
-  'Circuit de chauffage',
-]
-
-const methodes = [
-  'Détection acoustique',
-  'Gaz traceur',
-  'Inspection du réseau',
-  'Analyse des installations',
-]
-
-const reasons = [
-  'Localisation précise de la fuite',
-  'Méthodes de détection sans casse',
-  "Diagnostic technique de l'installation",
-  'Intervention ciblée pour éviter des travaux inutiles',
-]
+  "recherche de fuite habitation lyon",
+  "détection fuite maison sans casse",
+  "fuite sous dalle lyon",
+  "expert recherche fuite eau",
+  "fuite canalisation intérieure",
+  "fuite appartement lyon",
+];
 
 export default function HabitationPage() {
   return (
     <>
       <JsonLd faqItems={faqItems} />
       <BreadcrumbJsonLd
-        items={[{ label: 'Recherche de fuite habitation', href: '/recherche-fuite-habitation' }]}
+        items={[
+          {
+            label: "Recherche de fuite habitation",
+            href: "/recherche-fuite-habitation",
+          },
+        ]}
       />
-      <Breadcrumbs items={[{ label: 'Recherche de fuite habitation' }]} />
+      <Breadcrumbs items={[{ label: "Recherche de fuite habitation" }]} />
 
-      {/* Hero */}
       <PageHero>
+        <Badge variant="outline" className="text-white border-white/20 mb-4">
+          Expertise Maison & Appartement
+        </Badge>
         <h1 className="font-sora text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-          Recherche de fuite habitation sans destruction
+          Recherche de Fuite Habitation à Lyon : Détection Sans Destruction
         </h1>
-        <p className="text-lg text-blue-100 leading-relaxed mb-4">
-          Une fuite d&apos;eau dans une habitation peut provoquer des infiltrations,
-          de l&apos;humidité ou une surconsommation d&apos;eau. La recherche de fuite sans
-          destruction permet d&apos;identifier précisément l&apos;origine du problème sans
-          casser inutilement les sols ou les murs.
+        <p className="text-lg text-blue-100 leading-relaxed max-w-3xl mb-8">
+          Face à un dégât des eaux, des moisissures inexplicables ou une surconsommation, chaque minute compte.
+          <strong>Répère Fuite</strong> localise l'origine de vos infiltrations d'eau dans votre maison ou appartement
+          avec une précision millimétrique, <strong>sans jamais casser</strong> vos sols ni vos murs.
         </p>
-        <p className="text-blue-200 text-sm mb-6">
-          Certaines infiltrations peuvent également provenir d&apos;une toiture terrasse
-          ou d&apos;un toit plat.
-        </p>
-        <div className="flex flex-wrap gap-2 mb-8">
-          {tags.map((tag) => (
-            <span key={tag} className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-blue-100">
-              <CheckCircle2 className="w-3.5 h-3.5 text-secondary" />
-              {tag}
-            </span>
-          ))}
-        </div>
         <div className="flex flex-wrap gap-4">
           <Button href={siteConfig.phoneTel} variant="accent" size="lg">
             Appeler RepereFuite
@@ -126,184 +108,232 @@ export default function HabitationPage() {
           <Link href="/recherche-fuite-reseau-enterre" className="text-primary hover:underline flex items-center gap-1">
             Recherche de fuite réseau enterré <ArrowRight className="w-3 h-3" />
           </Link>
+          <Link href="/recherche-fuite-terrasse-lyon" className="text-primary hover:underline flex items-center gap-1">
+            Recherche de fuite toiture terrasse <ArrowRight className="w-3 h-3" />
+          </Link>
         </div>
       </section>
 
-      {/* Zone */}
-      <section className="py-6 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              RepereFuite intervient pour la recherche de fuite habitation sans destruction
-              dans l&apos;est lyonnais, le nord de l&apos;Isère et le sud de l&apos;Ain,
-              afin de localiser précisément l&apos;origine du problème.
+      <div className="bg-white">
+        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 space-y-24">
+          {/* Introduction */}
+          <section className="prose prose-blue max-w-none">
+            <p className="text-xl text-gray-600 leading-relaxed italic border-l-4 border-primary pl-6 py-2">
+              Une tache d&apos;humidité sur un mur, un parquet qui gondole, ou la facture d&apos;eau qui explose... Les fuites dans une habitation sont souvent invisibles, sournoises et causent des dégâts structurels importants avant même de se révéler au grand jour. Trouver leur origine devient alors une priorité absolue.
             </p>
-          </FadeIn>
-        </div>
-      </section>
+            <p>
+              Historiquement, la méthode consistait à casser les murs ou les dalles en suivant les traces d&apos;humidité jusqu&apos;à trouver la canalisation défectueuse. Une approche destructrice, coûteuse et traumatisante pour les propriétaires. Aujourd&apos;hui, avec la <strong>recherche de fuite sans casse à Lyon</strong>, Répère Fuite révolutionne les interventions. Nous utilisons des technologies non destructives pour scruter l&apos;intérieur de vos structures de manière scientifique.
+            </p>
+            <p>
+              Que la fuite soit située sur votre réseau d&apos;alimentation d&apos;eau froide ou chaude, sur votre système de chauffage (plancher chauffant, radiateurs), sous une dalle béton complète ou dans les cloisons, nous avons le matériel adapté pour &quot;voir l&apos;invisible&quot;. La garantie pour vous de cibler les travaux de réparation uniquement là où ils sont nécessaires, en minimisant l&apos;impact sur votre lieu de vie.
+            </p>
+          </section>
 
-      {/* Situations */}
-      <section className="py-16 lg:py-20 bg-light">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <h2 className="font-sora text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              Dans quelles situations rechercher une fuite dans une habitation ?
+          {/* Signes et symptômes */}
+          <section className="bg-light -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-20 rounded-[3rem]">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="font-sora text-3xl font-bold text-gray-900 mb-12 text-center text-balance">
+                Les symptômes d&apos;une fuite cachée dans votre maison
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  "Une rotation continue du compteur d'eau, même robinets fermés.",
+                  "L'apparition de cloques sur les peintures ou de décollement du papier peint.",
+                  "Une forte odeur persistante d'humidité ou de moisissure.",
+                  "Des joints de carrelage qui s'effritent, se noircissent ou du carrelage qui sonne creux.",
+                  "Un parquet flottant ou massif qui commence à gonfler ou se déformer.",
+                  "Une baisse de pression répétitive sur votre chaudière ou circuit de chauffage.",
+                  "L'apparition de salpêtre ou mousses blanches sur le bas des murs.",
+                  "Des taches sombres au plafond de l'étage inférieur d'une maison.",
+                ].map((signe, i) => (
+                  <div key={i} className="flex gap-4 p-4 bg-white rounded-2xl shadow-sm border border-gray-100">
+                    <div className="w-2 h-2 rounded-full bg-secondary mt-2 shrink-0" />
+                    <p className="text-gray-700 text-sm font-medium">{signe}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-12 text-center text-gray-600 italic">
+                Si vous rencontrez l&apos;un de ces cas de figure, ne tardez pas. Une intervention rapide limite drastiquement
+                les dégâts et les coûts liés à l&apos;assèchement des pièces.
+              </p>
+            </div>
+          </section>
+
+          {/* Méthodes technologiques */}
+          <section>
+            <h2 className="font-sora text-3xl font-bold text-gray-900 mb-12">
+              Nos méthodes de pointe : Zéro casse, 100% précision
             </h2>
-            <p className="text-gray-600 mb-8">
-              Certaines situations peuvent indiquer la présence d&apos;une fuite d&apos;eau
-              invisible dans une habitation.
-            </p>
-          </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {situations.map((s, i) => (
-              <FadeIn key={i} delay={i * 0.05}>
-                <div className="flex items-center gap-3 bg-white rounded-xl p-4 shadow-sm">
-                  <s.icon className="w-5 h-5 text-secondary shrink-0" />
-                  <span className="text-gray-700">{s.text}</span>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Emplacements */}
-      <section className="py-16 lg:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <h2 className="font-sora text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              Où se situent les fuites dans une habitation ?
-            </h2>
-            <p className="text-gray-600 mb-8">
-              Une fuite d&apos;eau dans une habitation peut apparaître à différents
-              endroits du réseau.
-            </p>
-          </FadeIn>
-          <div className="space-y-3">
-            {emplacements.map((item, i) => (
-              <FadeIn key={i} delay={i * 0.05}>
-                <div className="flex items-center gap-3">
-                  <Droplets className="w-4 h-4 text-primary shrink-0" />
-                  <span className="text-gray-700">{item}</span>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-          <FadeIn delay={0.3}>
-            <p className="text-gray-500 text-sm mt-6">
-              Certaines traces d&apos;humidité peuvent également provenir d&apos;une
-              infiltration par une toiture ou une terrasse.
-            </p>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Méthodes */}
-      <section className="py-16 lg:py-20 bg-light">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <h2 className="font-sora text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              Comment se déroule une recherche de fuite
-            </h2>
-            <p className="text-gray-600 mb-8">
-              Les techniques utilisées peuvent varier selon la configuration du réseau.
-            </p>
-          </FadeIn>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            {methodes.map((m, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-white rounded-xl p-4 text-center shadow-sm">
-                  <p className="font-semibold text-gray-900 text-sm">{m}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-          <FadeIn delay={0.3}>
-            <p className="text-gray-600 text-sm">
-              Ces méthodes permettent généralement de localiser la fuite sans casser
-              les sols ou les murs inutilement.
-            </p>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Pourquoi spécialiste */}
-      <section className="py-16 lg:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <h2 className="font-sora text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
-              Pourquoi faire appel à un spécialiste
-            </h2>
-          </FadeIn>
-          <div className="space-y-4">
-            {reasons.map((r, i) => (
-              <FadeIn key={i} delay={i * 0.05}>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-                  <span className="text-gray-700">{r}</span>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Zone intervention */}
-      <section className="py-16 lg:py-20 bg-light">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <h2 className="font-sora text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              Recherche de fuite habitation dans l&apos;Est lyonnais
-            </h2>
-            <p className="text-gray-600 mb-4">
-              RepereFuite intervient pour la recherche de fuite habitation dans
-              l&apos;est de la métropole lyonnaise, le nord de l&apos;Isère et le sud du
-              département de l&apos;Ain.
-            </p>
-            <p className="text-gray-600 mb-6">
-              Le secteur d&apos;intervention couvre environ 50 km autour de l&apos;est
-              lyonnais.
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <div className="flex flex-wrap gap-2 mb-8">
-              {['Vaulx-en-Velin', 'Villeurbanne', 'Décines', 'Meyzieu', 'Bron', 'Bourgoin-Jallieu', 'Ambérieu-en-Bugey'].map((c) => (
-                <span key={c} className="px-3 py-1 bg-white rounded-full text-sm text-gray-700 border border-gray-200">
-                  <MapPin className="w-3 h-3 inline mr-1 text-primary" />
-                  {c}
-                </span>
+            <div className="space-y-16">
+              {[
+                {
+                  title: "La détection électro-acoustique",
+                  icon: Home,
+                  desc: "L'eau qui s'échappe d'une canalisation sous pression génère un bruit spécifique, inaudible à l'oreille nue. Grâce à notre matériel électro-acoustique ultrasensible avec filtrage des fréquences parasites, nous 'écoutons' vos murs et vos sols pour localiser la source de l'écoulement.",
+                  method: "Idéal pour les canalisations d'eau sanitaire sous dalle ou encastrées dans les cloisons pleines.",
+                },
+                {
+                  title: "L'injection de gaz traceur",
+                  icon: Gauge,
+                  desc: "Nous vidangeons la canalisation concernée pour y injecter un mélange inodore, incolore et non toxique (95% azote, 5% hydrogène). Ce gaz extrêmement volatile traverse les chapes, le béton, les dalles, le carrelage et remonte à la surface au point exact de la fuite.",
+                  method: "Parfait pour les micro-fuites, les réseaux enterrés ou de grande longueur.",
+                },
+                {
+                  title: "L'inspection thermographique (Caméra Infrarouge)",
+                  icon: Thermometer,
+                  desc: "Une caméra thermique haut de gamme analyse les rayonnements infrarouges (la chaleur) de vos parois. Une fuite modifie la température de surface (zone plus froide pour l'eau sanitaire, plus chaude pour le chauffage). L'image met instantanément en évidence les zones anormalement humides en sous-face.",
+                  method: "Particulièrement efficace pour le plancher chauffant et la vérification globale de l'humidité des parois.",
+                },
+                {
+                  title: "L'exploration par caméra endoscopique",
+                  icon: Camera,
+                  desc: "Introduction d'une mini-caméra flexible haute résolution équipée de LED à l'intérieur de vos canalisations d'évacuation, de vos gaines techniques ou derrière un faux plafond. L'inspection vidéo révèle les fissures, les joints défectueux, les obstructions ou un écrasement du réseau.",
+                  method: "Indispensable pour vos descentes d'eaux usées, eaux vannes et colonnes pluviales de l'habitation.",
+                },
+              ].map((item, i) => (
+                <FadeIn key={i}>
+                  <div className="flex flex-col md:flex-row gap-8 items-start">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0">
+                      <item.icon className="w-8 h-8 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-sora text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                      <p className="text-gray-600 mb-4 leading-relaxed">{item.desc}</p>
+                      <div className="inline-flex items-center gap-2 text-sm font-medium text-secondary bg-secondary/5 px-4 py-1.5 rounded-full">
+                        <Wrench className="w-3.5 h-3.5" />
+                        Technologie adaptée : {item.method}
+                      </div>
+                    </div>
+                  </div>
+                </FadeIn>
               ))}
             </div>
-          </FadeIn>
+          </section>
 
-          {/* Rapport assurance */}
-          <FadeIn delay={0.2}>
-            <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
-              <div className="flex items-start gap-4">
-                <FileText className="w-6 h-6 text-primary shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-sora font-bold text-gray-900 mb-2">
-                    Rapport d&apos;intervention pour assurance
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Après la recherche de fuite, un rapport d&apos;intervention sera
-                    établi afin de détailler les investigations réalisées et les
-                    méthodes utilisées. Ce document peut être utile pour votre
-                    assurance ou pour l&apos;entreprise chargée de la réparation.
-                  </p>
+          {/* Zones d'interventions et Pourquoi RepereFuite */}
+          <section>
+            <h2 className="font-sora text-3xl font-bold text-gray-900 mb-8">
+              Intervention en Habitation, de Lyon à l&apos;Est Lyonnais
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-700 leading-relaxed mb-12">
+              <div className="space-y-6">
+                <p>
+                  Les installations de plomberie d&apos;une habitation classique sont très denses et variées : cuivres soudés ou sertis, tubes PER, multicouches sous goulottes, ou alimentations en acier dans les bâtisses plus anciennes.
+                </p>
+                <p>
+                  Nos connaissances des principes locaux de construction nous permettent d&apos;intervenir très efficacement
+                  aussi bien sur un vieil appartement de la presqu&apos;île de Lyon qu&apos;une maison récente de l&apos;Est lyonnais
+                  ou du Nord-Isère. En faisant appel à Répère Fuite, vous vous assurez les services d&apos;un acteur local
+                  réputé capable d&apos;intervenir chez vous en un temps record.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {["Lyon", "Villeurbanne", "Bron", "Meyzieu", "Décines-Charpieu", "Vaulx-en-Velin", "Bourgoin-Jallieu"].map((city) => (
+                    <span key={city} className="px-3 py-1 bg-white rounded-full text-sm text-gray-700 border border-gray-200 shadow-sm">
+                      <MapPin className="w-3 h-3 inline mr-1 text-primary" />
+                      {city}
+                    </span>
+                  ))}
                 </div>
               </div>
+              <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                <h3 className="font-sora font-semibold text-lg text-primary mb-6 flex items-center gap-2">
+                  <Info className="w-5 h-5" /> Les Atouts Répère Fuite
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                    <div><strong>Garantie de moyen de pointe</strong> pour éviter de creuser sans la certitude du diagnostic.</div>
+                  </li>
+                  <li className="flex gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                    <div><strong>Transparence et réactivité</strong> dès votre premier appel.</div>
+                  </li>
+                  <li className="flex gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                    <div><strong>Reconnu par les assureurs :</strong> La rédaction de notre rapport est normalisée pour l&apos;assurance et l&apos;expert qui viendra valider l&apos;indemnisation de vos sinistres.</div>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </FadeIn>
-        </div>
-      </section>
+          </section>
 
-      <FAQ
-        title="Questions fréquentes sur la recherche de fuite habitation"
-        items={faqItems}
-      />
+          {/* Déroulement intervention */}
+          <section className="border-t pt-16">
+            <h2 className="font-sora text-3xl font-bold text-gray-900 mb-12">
+              Les étapes de notre intervention chez vous
+            </h2>
+            <div className="space-y-8 relative before:content-[''] before:absolute before:left-8 before:top-4 before:bottom-4 before:w-0.5 before:bg-primary/20">
+              {[
+                { step: "1", title: "L'entretien d'évaluation", text: "Nous échangeons au téléphone pour bien comprendre le symptôme que vous avez observé, et fixons l'intervention au plus vite." },
+                { step: "2", title: "Recherche de la cause", text: "Déploiement de notre équipement électro-acoustique, thermographique, humidimètre et des autres méthodologies (traçage de fluide...)." },
+                { step: "3", title: "Marquage", text: "Une fois localisé le défaut ou l'anomalie d'étanchéité, nous le marquons physiquement pour que les travaux de réparation soient infaillibles." },
+                { step: "4", title: "Rapport détaillé Assurance", text: "Le rapport complet (explications, causes, mesures et photos) attestant de l'investigation sans destruction, vous est transmis rapidement." },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-8 items-center pl-4 bg-white">
+                  <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold relative z-10 shrink-0 shadow-lg shadow-primary/30">
+                    {item.step}
+                  </div>
+                  <div>
+                    <h4 className="font-sora font-bold text-gray-900">{item.title}</h4>
+                    <p className="text-sm text-gray-600 mt-1">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Assurance */}
+          <section className="bg-primary/5 p-12 rounded-3xl border border-primary/10">
+            <div className="flex flex-col md:flex-row gap-8 items-center text-center md:text-left">
+              <FileText className="w-16 h-16 text-primary shrink-0" />
+              <div>
+                <h2 className="font-sora text-2xl font-bold text-gray-900 mb-4">
+                  Dégât des eaux et conventions d&apos;assurance
+                </h2>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Une bonne nouvelle dans la gestion de votre sinistre : notre intervention répond aux exigences des conventions IRSI en vigueur, facilitant ainsi la prise en charge éventuelle par votre assurance MRH ou celle de l&apos;immeuble.
+                  Notre devis préalable et le rapport d&apos;expertise, incluant les preuves par l&apos;image, permettent au réseau sinistre d&apos;accélérer le déblocage des fonds sans aucun risque de litige majeur.
+                </p>
+                <Link href="/contact" className="mt-6 inline-flex items-center text-primary font-bold hover:gap-2 transition-all">
+                  Contactez-nous pour votre dossier <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          {/* Conclusion */}
+          <section className="prose prose-blue max-w-none pt-12 border-t">
+            <h2 className="font-sora text-gray-900">
+              Arrêtez les dommages, contactez l&apos;expert Répère Fuite
+            </h2>
+            <p>
+              Agir vite avec les bonnes ressources évite bien des désagréments. Le prix initial d&apos;une <strong>recherche de fuite habitation sans destruction à Lyon</strong> ne pèse pas lourd comparé au coût potentiellement exorbitant du renouvellement d&apos;un parquet, de la gestion du risque structurel ou encore de l&apos;assèchement électrique.
+            </p>
+            <p>
+              Évitez que l&apos;eau ne devienne l&apos;ennemie de votre maison en privilégiant une localisation professionnelle rapide. Nous avons tout le matériel nécessaire au sein de notre base de l&apos;Est Lyonnais pour vous aider à repartir du bon pied au plus tôt.
+            </p>
+
+            <div className="mt-12 p-8 bg-gray-900 rounded-3xl text-white">
+              <h3 className="text-white font-sora text-2xl mb-4">Besoin d&apos;un diagnostic express ?</h3>
+              <p className="text-gray-400 mb-8">
+                Parce que l&apos;eau continue de couler... N&apos;hésitez plus pour obtenir un diagnostic sur-mesure.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button href={siteConfig.phoneTel} variant="accent" size="lg">Appeler Répère Fuite</Button>
+                <Button href="/contact" variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10">Formulaire contact</Button>
+              </div>
+            </div>
+          </section>
+
+          <FAQ
+            title="Questions fréquentes sur la recherche de fuite habitation"
+            items={faqItems}
+          />
+
+        </article>
+      </div>
 
       <CTABanner />
     </>
-  )
+  );
 }

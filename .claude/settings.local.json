@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm run build)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(lsof -ti :3000)",
+      "Bash(lsof -ti :3001)",
+      "Bash(curl -sL \"https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=1920&q=80\" -o /Users/macbookpro/Desktop/reperefuite/public/images/hero-bg.jpg)",
+      "Bash(git init)",
+      "Bash(git add -A)",
+      "Bash(git commit -m \"Initial commit: RepereFuite Next.js website - 8 pages, SEO, responsive\")",
+      "Bash(git rm -r --cached .next node_modules .DS_Store)",
+      "Bash(git commit -m \"Add .gitignore, clean tracked cache/node_modules\")",
+      "Bash(gh auth status)",
+      "Bash(gh repo create reperefuite --public --source=. --push --description \"RepereFuite - Recherche de fuite sans destruction | Site Next.js\")",
+      "Bash(git remote add origin https://github.com/enzotrade11/reperefuite.git)",
+      "Bash(git push -u origin main)",
+      "Bash(git commit -m \"UI improvements: centered hero with bg image, Space Grotesk + Inter fonts, logo adjustments\")",
+      "Bash(git push)",
+      "Bash(npm --version)",
+      "Bash(/usr/local/bin/node --version)"
+    ]
+  }
+}

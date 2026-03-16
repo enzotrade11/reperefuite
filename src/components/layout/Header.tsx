@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Menu, X } from 'lucide-react'
+import { Phone, Menu, X, ChevronDown } from 'lucide-react'
 import { siteConfig, navLinks } from '@/data/siteConfig'
 import { cn } from '@/lib/utils'
 import MobileMenu from './MobileMenu'
@@ -35,9 +35,9 @@ export default function Header() {
               <Image
                 src="/images/logo-reperefuite.png"
                 alt="RepereFuite - Recherche de fuite sans destruction"
-                width={180}
-                height={50}
-                className="h-12 lg:h-14 w-auto"
+                width={270}
+                height={75}
+                className="h-16 lg:h-20 w-auto"
                 priority
               />
             </Link>
@@ -45,13 +45,31 @@ export default function Header() {
             {/* Desktop nav */}
             <nav className="hidden lg:flex items-center gap-1">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary rounded-lg hover:bg-primary/5 transition-colors"
-                >
-                  {link.label}
-                </Link>
+                <div key={link.href} className="relative group">
+                  <Link
+                    href={link.href}
+                    className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary rounded-lg hover:bg-primary/5 transition-colors flex items-center gap-1"
+                  >
+                    {link.label}
+                    {link.dropdown && <ChevronDown className="w-4 h-4 text-gray-400 group-hover:text-primary" />}
+                  </Link>
+                  
+                  {link.dropdown && (
+                    <div className="absolute top-full left-0 w-64 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                      <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-2 overflow-hidden">
+                        {link.dropdown.map((subItem) => (
+                          <Link
+                            key={subItem.href}
+                            href={subItem.href}
+                            className="block px-4 py-2.5 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 transition-colors"
+                          >
+                            {subItem.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               ))}
             </nav>
 
