@@ -89,6 +89,24 @@ export default function HabitationPage() {
           <strong>Répère Fuite</strong> localise l'origine de vos infiltrations d'eau dans votre maison ou appartement
           avec une précision millimétrique, <strong>sans jamais casser</strong> vos sols ni vos murs.
         </p>
+<<<<<<< HEAD
+=======
+        <p className="text-blue-200 text-sm mb-6">
+          Certaines infiltrations peuvent également provenir d&apos;une{" "}
+          <Link href="/recherche-fuite-terrasse-lyon" className="underline hover:text-white transition-colors">
+            toiture terrasse
+          </Link>{" "}
+          ou d&apos;un toit plat.
+        </p>
+        <div className="flex flex-wrap gap-2 mb-8">
+          {tags.map((tag) => (
+            <span key={tag} className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm text-blue-100">
+              <CheckCircle2 className="w-3.5 h-3.5 text-secondary" />
+              {tag}
+            </span>
+          ))}
+        </div>
+>>>>>>> d9ff2d91e29979e098141bee7e5c9a09ea2a8256
         <div className="flex flex-wrap gap-4">
           <Button href={siteConfig.phoneTel} variant="accent" size="lg">
             Appeler RepereFuite
@@ -164,6 +182,7 @@ export default function HabitationPage() {
             <h2 className="font-sora text-3xl font-bold text-gray-900 mb-12">
               Nos méthodes de pointe : Zéro casse, 100% précision
             </h2>
+<<<<<<< HEAD
             <div className="space-y-16">
               {[
                 {
@@ -206,6 +225,133 @@ export default function HabitationPage() {
                     </div>
                   </div>
                 </FadeIn>
+=======
+            <p className="text-gray-600 mb-8">
+              Certaines situations peuvent indiquer la présence d&apos;une fuite d&apos;eau
+              invisible dans une habitation.
+            </p>
+          </FadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {situations.map((s, i) => (
+              <FadeIn key={i} delay={i * 0.05}>
+                <div className="flex items-center gap-3 bg-white rounded-xl p-4 shadow-sm">
+                  <s.icon className="w-5 h-5 text-secondary shrink-0" />
+                  <span className="text-gray-700">{s.text}</span>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Emplacements */}
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <h2 className="font-sora text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              Où se situent les fuites dans une habitation ?
+            </h2>
+            <p className="text-gray-600 mb-8">
+              Une fuite d&apos;eau dans une habitation peut apparaître à différents
+              endroits du réseau.
+            </p>
+          </FadeIn>
+          <div className="space-y-3">
+            {emplacements.map((item, i) => (
+              <FadeIn key={i} delay={i * 0.05}>
+                <div className="flex items-center gap-3">
+                  <Droplets className="w-4 h-4 text-primary shrink-0" />
+                  <span className="text-gray-700">{item}</span>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+          <FadeIn delay={0.3}>
+            <p className="text-gray-500 text-sm mt-6">
+              Certaines traces d&apos;humidité peuvent également provenir d&apos;une{" "}
+              <Link href="/recherche-fuite-terrasse-lyon" className="text-primary hover:underline">
+                infiltration par une toiture ou une terrasse
+              </Link>.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Méthodes */}
+      <section className="py-16 lg:py-20 bg-light">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <h2 className="font-sora text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              Comment se déroule une recherche de fuite
+            </h2>
+            <p className="text-gray-600 mb-8">
+              Les techniques utilisées peuvent varier selon la configuration du réseau.
+            </p>
+          </FadeIn>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            {methodes.map((m, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <div className="bg-white rounded-xl p-4 text-center shadow-sm">
+                  <p className="font-semibold text-gray-900 text-sm">{m}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+          <FadeIn delay={0.3}>
+            <p className="text-gray-600 text-sm">
+              Ces méthodes permettent généralement de localiser la fuite sans casser
+              les sols ou les murs inutilement.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Pourquoi spécialiste */}
+      <section className="py-16 lg:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <h2 className="font-sora text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
+              Pourquoi faire appel à un spécialiste
+            </h2>
+          </FadeIn>
+          <div className="space-y-4">
+            {reasons.map((r, i) => (
+              <FadeIn key={i} delay={i * 0.05}>
+                <div className="flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                  <span className="text-gray-700">{r}</span>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Zone intervention */}
+      <section className="py-16 lg:py-20 bg-light">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn>
+            <h2 className="font-sora text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              Recherche de fuite habitation dans l&apos;Est lyonnais
+            </h2>
+            <p className="text-gray-600 mb-4">
+              RepereFuite intervient pour la recherche de fuite habitation dans
+              l&apos;est de la métropole lyonnaise, le nord de l&apos;Isère et le sud du
+              département de l&apos;Ain.
+            </p>
+            <p className="text-gray-600 mb-6">
+              Le secteur d&apos;intervention couvre environ 50 km autour de l&apos;est
+              lyonnais.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {['Vaulx-en-Velin', 'Villeurbanne', 'Décines', 'Meyzieu', 'Bron', 'Bourgoin-Jallieu', 'Ambérieu-en-Bugey'].map((c) => (
+                <span key={c} className="px-3 py-1 bg-white rounded-full text-sm text-gray-700 border border-gray-200">
+                  <MapPin className="w-3 h-3 inline mr-1 text-primary" />
+                  {c}
+                </span>
+>>>>>>> d9ff2d91e29979e098141bee7e5c9a09ea2a8256
               ))}
             </div>
           </section>

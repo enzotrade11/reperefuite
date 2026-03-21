@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils'
 
 type BadgeProps = {
   children: React.ReactNode
-  variant?: 'primary' | 'accent' | 'success'
+  variant?: 'primary' | 'accent' | 'success' | 'outline'
   className?: string
 }
 
@@ -15,6 +15,7 @@ export default function Badge({
     primary: 'bg-primary/10 text-primary',
     accent: 'bg-accent/10 text-accent',
     success: 'bg-emerald-50 text-emerald-700',
+    outline: 'bg-transparent border border-current',
   }
 
   return (
