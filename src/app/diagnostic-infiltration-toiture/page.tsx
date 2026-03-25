@@ -67,7 +67,7 @@ export default function InfiltrationToiturePage() {
           Diagnostic Infiltration Toiture Terrasse à Lyon
         </h1>
         <p className="text-lg text-blue-100 leading-relaxed max-w-3xl mb-8">
-          Votre plafond est taché après chaque pluie ? L'eau s'infiltre dans votre logement ? 
+          Votre plafond est taché après chaque pluie ? L'eau s'infiltre dans votre logement ?
           <strong>Répère Fuite</strong> analyse l'origine de vos infiltrations sur toitures terrasses dans le Grand Lyon.
         </p>
         <div className="flex flex-wrap gap-4">
