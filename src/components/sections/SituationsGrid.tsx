@@ -1,8 +1,9 @@
 'use client'
 
-import { Droplets, Home, Gauge, Eye, Waves } from 'lucide-react'
+import { Droplets, Home, Gauge, Eye } from 'lucide-react'
 import Card from '@/components/ui/Card'
 import FadeIn from '@/components/ui/FadeIn'
+import PoolLadder from '@/components/ui/icons/PoolLadder'
 
 const situations = [
   {
@@ -22,7 +23,7 @@ const situations = [
     text: 'Fuite sous dalle',
   },
   {
-    icon: Waves,
+    icon: PoolLadder,
     text: "Piscine qui perd de l'eau",
   },
   {

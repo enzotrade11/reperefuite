@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle2, ArrowRight, Droplets, Waves, MapPin, Wrench, Info, Thermometer, Gauge, Camera, FileText } from 'lucide-react'
+import { CheckCircle2, ArrowRight, Droplets, MapPin, Wrench, Info, Thermometer, Gauge, Camera, FileText } from 'lucide-react'
 import Breadcrumbs from '@/components/layout/Breadcrumbs'
 import FAQ from '@/components/sections/FAQ'
 import CTABanner from '@/components/sections/CTABanner'
+import MiddleCTA from '@/components/sections/MiddleCTA'
 import JsonLd from '@/components/seo/JsonLd'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import PageHero from '@/components/sections/PageHero'
@@ -11,6 +12,7 @@ import FadeIn from '@/components/ui/FadeIn'
 import Badge from '@/components/ui/Badge'
 import Button from '@/components/ui/Button'
 import { siteConfig } from '@/data/siteConfig'
+import PoolLadder from '@/components/ui/icons/PoolLadder'
 
 export const metadata: Metadata = {
   title: 'Recherche de Fuite Piscine Lyon | Détection Sans Destruction | Répère Fuite',
@@ -66,7 +68,7 @@ export default function PiscinePage() {
       />
       <Breadcrumbs items={[{ label: "Recherche de fuite piscine" }]} />
 
-      <PageHero>
+      <PageHero backgroundImage="/images/piscine-hero.jpg">
         <Badge variant="outline" className="text-white border-white/20 mb-4">
           Expertise Bassin & Réseaux
         </Badge>
@@ -74,8 +76,8 @@ export default function PiscinePage() {
           Recherche de Fuite Piscine à Lyon — Diagnostiquer Sans Détruire
         </h1>
         <p className="text-lg text-blue-100 leading-relaxed max-w-3xl mb-8">
-          Votre piscine perd de l'eau ? Ne laissez pas une fuite vider votre bassin et fragiliser son environnement. 
-          <strong>Répère Fuite</strong> localise avec précision l'origine de l'infiltration, que ce soit sur le bassin 
+          Votre piscine perd de l'eau ? Ne laissez pas une fuite vider votre bassin et fragiliser son environnement.
+          <strong>Répère Fuite</strong> localise avec précision l'origine de l'infiltration, que ce soit sur le bassin
           ou le réseau hydraulique, <strong>sans aucune destruction</strong>.
         </p>
         <div className="flex flex-wrap gap-4">
@@ -101,6 +103,22 @@ export default function PiscinePage() {
             <p>
               Qu&apos;il s&apos;agisse d&apos;une micro-fissure dans une pièce à sceller (skimmer, refoulement), d&apos;un collage défectueux sous terre ou d&apos;un problème d&apos;étanchéité du bassin, nos méthodes non destructives vous apportent une réponse claire. Une fois la fuite localisée, la réparation peut être effectuée de manière ciblée, rapide et beaucoup moins coûteuse.
             </p>
+          </section>
+
+          <MiddleCTA />
+
+          {/* Maillage vers sous-page spécifique */}
+          <section className="bg-primary/5 p-8 rounded-3xl border border-primary/10">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div>
+                <h3 className="font-sora font-bold text-gray-900 text-xl mb-2">Focus : Piscines Enterrées</h3>
+                <p className="text-gray-600 text-sm">Découvrez nos méthodes spécifiques pour les bassins excavés et les réseaux sous dallage.</p>
+              </div>
+              <Button href="/detection-fuite-piscine-enterree" variant="primary" size="sm">
+                Voir l'expertise dédiée
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
           </section>
 
           {/* Pourquoi suspecter une fuite */}
@@ -143,7 +161,7 @@ export default function PiscinePage() {
                 },
                 {
                   title: "L'électro-acoustique (Écoute des réseaux)",
-                  icon: Waves,
+                  icon: PoolLadder,
                   desc: "Nos techniciens utilisent des capteurs sonores haute précision pour localiser le bruit généré par la fuite d'eau sous pression. Cette écoute active permet de cibler la zone sinistrée avec une grande fiabilité.",
                   method: "Efficace sur les réseaux hydrauliques et les pièces à sceller.",
                 },
@@ -187,7 +205,7 @@ export default function PiscinePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-700 leading-relaxed mb-12">
               <div className="space-y-6">
                 <p>
-                  Les piscines de la région subissent les assauts du temps et les mouvements de sol. À <strong>Villeurbanne, Genas, ou Chassieu</strong>, les propriétaires nous font confiance pour la protection de leur équipement de loisir. 
+                  Les piscines de la région subissent les assauts du temps et les mouvements de sol. À <strong>Villeurbanne, Genas, ou Chassieu</strong>, les propriétaires nous font confiance pour la protection de leur équipement de loisir.
                 </p>
                 <p>
                   Nous intervenons rapidement pour stopper le gaspillage d'eau et de produits chimiques. Notre rapport final est un outil précieux pour votre piscinier réparateur ou pour votre compagnie d'assurance.

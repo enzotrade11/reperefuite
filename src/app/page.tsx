@@ -7,17 +7,25 @@ import ZoneIntervention from '@/components/sections/ZoneIntervention'
 import SituationsLinks from './SituationsLinks'
 import WhySansDestruction from './WhySansDestruction'
 import CTABanner from '@/components/sections/CTABanner'
+import MiddleCTA from '@/components/sections/MiddleCTA'
 import JsonLd from '@/components/seo/JsonLd'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 import FadeIn from '@/components/ui/FadeIn'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://reperefuite.fr',
+  },
+}
 
 export default function HomePage() {
   return (
     <>
       <JsonLd />
       <Hero />
-      
+
       {/* Introduction SEO riche */}
       <section className="bg-white py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -77,6 +85,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <MiddleCTA />
 
       <WhyUs />
       <MethodesSummary />

@@ -1,11 +1,12 @@
 'use client'
 
 import Image from 'next/image'
-import { Phone, ArrowRight } from 'lucide-react'
+import { Phone, ArrowRight, Check } from 'lucide-react'
 import Button from '@/components/ui/Button'
 import Badge from '@/components/ui/Badge'
 import FadeIn from '@/components/ui/FadeIn'
 import { siteConfig } from '@/data/siteConfig'
+import PoolLadder from '@/components/ui/icons/PoolLadder'
 
 const tags = [
   'habitation',
@@ -17,15 +18,15 @@ const tags = [
 
 export default function Hero() {
   return (
-    <section className="relative text-white overflow-hidden min-h-[600px] lg:min-h-[700px] flex items-center">
+    <section className="relative text-white overflow-hidden min-h-[500px] lg:min-h-[600px] flex items-center">
       {/* Background image */}
       <Image
-        src="/images/hero-bg.jpg"
+        src="/images/hero-thermal.jpg"
         alt=""
         fill
-        className="object-cover"
+        className="object-cover object-center"
         priority
-        quality={85}
+        quality={90}
       />
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/80 to-primary-light/75" />
@@ -59,17 +60,18 @@ export default function Hero() {
 
           <FadeIn delay={0.25}>
             <div className="flex flex-wrap justify-center gap-2 mb-8">
-              {tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-full text-sm text-blue-100"
-                >
-                  <svg className="w-3.5 h-3.5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  {tag}
-                </span>
-              ))}
+              {tags.map((tag) => {
+                const Icon = tag === 'piscine' ? PoolLadder : Check
+                return (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/10 backdrop-blur-sm rounded-full text-sm text-blue-100"
+                  >
+                    <Icon className="w-3.5 h-3.5 text-secondary" />
+                    {tag}
+                  </span>
+                )
+              })}
             </div>
           </FadeIn>
 

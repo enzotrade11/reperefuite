@@ -45,9 +45,6 @@ export const metadata: Metadata = {
     description:
       "Spécialisé dans la localisation de fuites d'eau dans les habitations, piscines et réseaux enterrés, sans destruction inutile.",
   },
-  alternates: {
-    canonical: 'https://reperefuite.fr',
-  },
   robots: {
     index: true,
     follow: true,

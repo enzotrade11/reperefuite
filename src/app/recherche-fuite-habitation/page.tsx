@@ -4,6 +4,7 @@ import { CheckCircle2, ArrowRight, Droplets, Gauge, Home, Eye, Wrench, MapPin, F
 import Breadcrumbs from '@/components/layout/Breadcrumbs'
 import FAQ from '@/components/sections/FAQ'
 import CTABanner from '@/components/sections/CTABanner'
+import MiddleCTA from '@/components/sections/MiddleCTA'
 import JsonLd from '@/components/seo/JsonLd'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import PageHero from '@/components/sections/PageHero'
@@ -143,6 +144,8 @@ export default function HabitationPage() {
               Que la fuite soit située sur votre réseau d&apos;alimentation d&apos;eau froide ou chaude, sur votre système de chauffage (plancher chauffant, radiateurs), sous une dalle béton complète ou dans les cloisons, nous avons le matériel adapté pour &quot;voir l&apos;invisible&quot;. La garantie pour vous de cibler les travaux de réparation uniquement là où ils sont nécessaires, en minimisant l&apos;impact sur votre lieu de vie.
             </p>
           </section>
+
+          <MiddleCTA />
 
           {/* Signes et symptômes */}
           <section className="bg-light -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-20 rounded-[3rem]">

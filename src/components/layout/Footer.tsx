@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Mail, MapPin, Droplets } from 'lucide-react'
+import { Phone, Mail, MapPin, Home, Shovel } from 'lucide-react'
 import { siteConfig } from '@/data/siteConfig'
+import PoolLadder from '@/components/ui/icons/PoolLadder'
 
 const serviceLinks = [
   { label: 'Recherche fuite sans destruction', href: '/' },
@@ -26,18 +27,29 @@ export default function Footer() {
                 <Image
                   src="/images/logo-reperefuite.png"
                   alt="RepereFuite"
-                  width={270}
-                  height={75}
-                  className="h-16 w-auto"
+                  width={324}
+                  height={90}
+                  className="h-[77px] w-auto"
                 />
               </Link>
             </div>
             <p className="text-lg font-semibold text-white mb-1">
               {siteConfig.tagline}
             </p>
-            <p className="text-gray-400">
-              Habitation &bull; Piscine &bull; Réseau enterré
-            </p>
+            <div className="flex items-center gap-3 text-gray-400 text-sm mb-6">
+              <div className="flex items-center gap-1.5">
+                <Home className="w-3.5 h-3.5 text-secondary" />
+                <span>Habitation</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <PoolLadder className="w-3.5 h-3.5 text-secondary" />
+                <span>Piscine</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Shovel className="w-3.5 h-3.5 text-secondary" />
+                <span>Réseau enterré</span>
+              </div>
+            </div>
             <div className="mt-6 space-y-3">
               <a
                 href={siteConfig.phoneTel}

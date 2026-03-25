@@ -2,6 +2,7 @@
 
 import { CheckCircle2 } from 'lucide-react'
 import FadeIn from '@/components/ui/FadeIn'
+import PoolLadder from '@/components/ui/icons/PoolLadder'
 
 const reasons = [
   'Localisation précise de la fuite',
@@ -28,12 +29,16 @@ export default function WhyUs() {
                 inutiles et des dégâts supplémentaires.
               </p>
               <ul className="space-y-4">
-                {reasons.map((reason, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                    <span className="text-gray-200">{reason}</span>
-                  </li>
-                ))}
+                {reasons.map((reason, index) => {
+                  const isPool = reason.toLowerCase().includes('piscine')
+                  const Icon = isPool ? PoolLadder : CheckCircle2
+                  return (
+                    <li key={index} className="flex items-start gap-3">
+                      <Icon className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                      <span className="text-gray-200">{reason}</span>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
           </FadeIn>

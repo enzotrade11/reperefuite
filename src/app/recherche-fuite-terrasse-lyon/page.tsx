@@ -17,6 +17,7 @@ import {
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import FAQ from "@/components/sections/FAQ";
 import CTABanner from "@/components/sections/CTABanner";
+import MiddleCTA from "@/components/sections/MiddleCTA";
 import JsonLd from "@/components/seo/JsonLd";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import PageHero from "@/components/sections/PageHero";
@@ -158,6 +159,8 @@ export default function TerrasseLyonPage() {
               nous sécurisons votre intervention.
             </p>
           </section>
+
+          <MiddleCTA />
 
           {/* Pourquoi les toitures terrasses fuient */}
           <section>

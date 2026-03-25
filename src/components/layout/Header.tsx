@@ -29,15 +29,15 @@ export default function Header() {
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+          <div className="flex items-center justify-between h-[77px] lg:h-24">
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0">
               <Image
                 src="/images/logo-reperefuite.png"
                 alt="RepereFuite - Recherche de fuite sans destruction"
-                width={270}
-                height={75}
-                className="h-16 lg:h-20 w-auto"
+                width={324}
+                height={90}
+                className="h-[77px] lg:h-24 w-auto"
                 priority
               />
             </Link>
@@ -97,7 +97,7 @@ export default function Header() {
       <MobileMenu isOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
 
       {/* Spacer */}
-      <div className="h-16 lg:h-20" />
+      <div className="h-[77px] lg:h-24" />
     </>
   )
 }

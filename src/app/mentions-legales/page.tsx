@@ -5,6 +5,7 @@ import { siteConfig } from '@/data/siteConfig'
 export const metadata: Metadata = {
   title: 'Mentions légales – RepereFuite',
   description: 'Mentions légales du site reperefuite.fr.',
+  alternates: { canonical: 'https://reperefuite.fr/mentions-legales' },
   robots: { index: false, follow: false },
 }
 

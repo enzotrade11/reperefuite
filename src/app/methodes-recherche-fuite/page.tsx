@@ -1,207 +1,259 @@
 import type { Metadata } from 'next'
-import { Ear, Wind, Camera, TestTube2, Waves, Radio, FileText } from 'lucide-react'
+import Link from 'next/link'
+import { Ear, Wind, Camera, TestTube2, Cloud, Radio, FileText, CheckCircle2, ArrowRight, Info, Search, ShieldCheck, Droplets, MapPin, Gauge } from 'lucide-react'
 import Breadcrumbs from '@/components/layout/Breadcrumbs'
+import FAQ from '@/components/sections/FAQ'
 import CTABanner from '@/components/sections/CTABanner'
+import MiddleCTA from '@/components/sections/MiddleCTA'
 import JsonLd from '@/components/seo/JsonLd'
 import BreadcrumbJsonLd from '@/components/seo/BreadcrumbJsonLd'
 import PageHero from '@/components/sections/PageHero'
 import FadeIn from '@/components/ui/FadeIn'
+import Badge from '@/components/ui/Badge'
+import Button from '@/components/ui/Button'
+import { siteConfig } from '@/data/siteConfig'
 
 export const metadata: Metadata = {
-  title: 'Méthodes de recherche de fuite sans destruction – RepereFuite',
+  title: 'Méthodes Recherche de Fuite Non Destructive Lyon | Expert Détection',
   description:
-    "Découvrez les méthodes de recherche de fuite sans destruction : détection acoustique, gaz traceur, caméra, fluorescéine, fumigation. RepereFuite Lyon Est.",
-  alternates: { canonical: 'https://reperefuite.fr/methodes-recherche-fuite' },
-}
+    "Découvrez nos technologies de recherche de fuite sans destruction à Lyon : gaz traceur, acoustique, caméra, fumigène. Expertise précise et rapport assurance.",
+  alternates: {
+    canonical: "https://reperefuite.fr/methodes-recherche-fuite",
+  },
+};
+
+const faqItems = [
+  {
+    question: "Pourquoi privilégier la recherche de fuite non destructive ?",
+    answer:
+      "C'est la méthode la plus économique et la moins invasive. Au lieu de casser des murs ou des sols au hasard pour trouver un tuyau percé, nous localisons le point exact du problème. Les travaux de remise en état sont ainsi réduits au strict minimum.",
+  },
+  {
+    question: "Quelle méthode est la plus fiable ?",
+    answer:
+      "Il n'y a pas une méthode 'miracle'. La fiabilité repose sur le croisement des techniques. Par exemple, on utilise souvent le gaz traceur pour confirmer une zone détectée au préalable par acoustique. C'est le cumul des indices qui garantit la précision du diagnostic.",
+  },
+  {
+    question: "Le matériel utilisé est-il dangereux pour ma santé ou mon jardin ?",
+    answer:
+      "Absolument pas. Les gaz injectés sont neutres et inoffensifs (mélange azote/hydrogène). Les colorants comme la fluorescéine sont biodégradables et sans danger pour l'environnement ou les piscines. La fumée utilisée est inodore et ne laisse aucune trace.",
+  },
+  {
+    question: "Intervenez-vous avec tout le matériel nécessaire ?",
+    answer:
+      "Oui, nos techniciens arrivent sur place avec un véhicule équipé de l'ensemble des technologies citées. Nous adaptons notre stratégie en temps réel selon les découvertes sur le terrain.",
+  },
+];
 
 const methodes = [
   {
     icon: Ear,
-    title: 'Détection de fuite par méthode acoustique',
+    title: 'Détection Électro-Acoustique',
     description:
-      "Certaines fuites produisent un bruit caractéristique lorsque l'eau s'échappe sous pression dans une canalisation. La détection acoustique consiste à écouter ces bruits à l'aide d'un matériel spécialisé afin de localiser la zone de fuite.",
+      "L'eau qui sort d'un tuyau sous pression crée une vibration acoustique unique. Nos microphones de sol ultra-sensibles captent cette fréquence de bruit de fuite à travers le béton, le carrelage ou la terre.",
     usages: [
-      'Canalisations enterrées',
-      "Réseaux d'alimentation en eau",
-      'Fuites situées sous une dalle',
+      'Canalisations intérieures (cloisons, dalles)',
+      'Réseaux d\'alimentation enterrés',
+      'Canalisations de piscines (refoulements, aspirations)',
     ],
+    tech: "Amplification numérique des bruits de fuite.",
   },
   {
-    icon: Wind,
-    title: 'Recherche de fuite par gaz traceur',
+    icon: Gauge,
+    title: 'Injection de Gaz Traceur',
     description:
-      "Le gaz traceur est une méthode utilisée pour localiser certaines fuites difficiles à détecter. Un gaz inoffensif est injecté dans la canalisation. Lorsqu'il s'échappe par la fuite, il remonte à la surface et peut être détecté à l'aide d'un appareil spécifique.",
+      "On injecte un mélange azote-hydrogène (gaz léger et neutre) après avoir vidé la canalisation suspecte. Le gaz remonte verticalement au point de rupture et traverse même les matériaux les plus denses.",
     usages: [
-      'Réseaux enterrés',
-      'Fuites sous dalle',
-      'Micro-fuites difficiles à repérer',
+      'Micro-fuites invisibles après compteur',
+      'Tuyauteries sous terrasses ou bitume',
+      'Piscines enterrées et systèmes de chauffage',
     ],
-  },
-  {
-    icon: TestTube2,
-    title: 'Détection de fuite par fluorescéine',
-    description:
-      "La fluorescéine est un colorant utilisé pour repérer certaines fuites d'eau ou infiltrations. Ce produit permet de suivre le cheminement de l'eau et d'identifier l'origine d'une infiltration.",
-    usages: [
-      "Recherche d'infiltration",
-      "Test d'étanchéité",
-      "Détection de cheminement de l'eau",
-    ],
-  },
-  {
-    icon: Waves,
-    title: 'Détection de fuite par fumigation',
-    description:
-      "La fumigation consiste à injecter une fumée visible dans une canalisation ou un réseau afin de repérer l'endroit où elle s'échappe.",
-    usages: [
-      "Recherche de défaut d'étanchéité",
-      "Contrôle de réseau d'évacuation",
-      'Détection de fuite sur réseau enterré',
-    ],
+    tech: "Sensibilité de détection de quelques parts par million (PPM).",
   },
   {
     icon: Camera,
-    title: 'Inspection de canalisation par caméra',
+    title: 'Inspection Vidéo (Endoscopie)',
     description:
-      "L'inspection par caméra permet de visualiser l'intérieur d'une canalisation afin d'identifier certaines anomalies ou zones suspectes.",
+      "Introduction de caméras HD étanches dans les réseaux d'évacuation ou d'aspiration pour visualiser l'intérieur des tuyaux. Nous repérons les fissures, déboîtements, racines ou écrasements.",
     usages: [
-      'Inspection de canalisation',
-      "Vérification de réseaux d'évacuation",
-      'Localisation de zones suspectes',
+      "Diagnostic structurel des évacuations (PVC, fonte)",
+      "Vérification des skimmers et tuyauteries de piscine",
+      "Contrôle de conformité de réseaux neufs",
     ],
+    tech: "Caméra flexible avec enregistrement vidéo et photo.",
   },
   {
-    icon: Radio,
-    title: 'Détection par corrélation acoustique',
+    icon: TestTube2,
+    title: 'Coloration (Traceurs UV)',
     description:
-      "La corrélation acoustique est utilisée pour localiser une fuite sur une canalisation enterrée entre deux points du réseau. Cette technique permet de déterminer précisément la zone de fuite.",
+      "Utilisation de colorants biodégradables (fluorescéine, jaune, bleu) qui deviennent fluorescents sous lampe UV. Cela permet de suivre le cheminement de l'eau lors d'infiltrations complexes.",
     usages: [
-      'Canalisation enterrée longue distance',
-      'Réseau d\'alimentation en eau',
+      "Infiltrations sur toitures et terrasses",
+      "Fuites de douches à l'italienne ou baignoires",
+      "Recherche d'origine d'humidité sur murs de façades",
     ],
+    tech: "Traceurs biodégradables haute concentration.",
   },
-]
+  {
+    icon: Wind,
+    title: 'Test Fumigène (Smoke Test)',
+    description:
+      "Injection de fumée haute densité sous les membranes d'étanchéité ou dans les réseaux d'évacuation d'air. La fumée s'échappe par la moindre fissure ou défaut de soudure.",
+    usages: [
+      "Étanchéité de toitures terrasses lyonnaises",
+      "Joints de dilatation et relevés d'étanchéité",
+      "Localisation d'odeurs de canalisations",
+    ],
+    tech: "Générateur de fumée sèche inodore.",
+  },
+  {
+    icon: Thermometer,
+    title: 'Thermographie Infrarouge',
+    description:
+      "Analyse des variations de température sur les surfaces. Une fuite d'eau chaude (chauffage, ECS) ou une infiltration froide crée une signature thermique détectable à la caméra infrarouge.",
+    usages: [
+      "Fuites sur chauffage au sol (PCBT)",
+      "Localisation de ponts thermiques et humidité",
+      "Infiltrations invisibles en façade",
+    ],
+    tech: "Caméra thermique haute résolution.",
+  },
+];
 
 export default function MethodesPage() {
   return (
     <>
-      <JsonLd />
+      <JsonLd faqItems={faqItems} />
       <BreadcrumbJsonLd
         items={[{ label: 'Méthodes de recherche de fuite', href: '/methodes-recherche-fuite' }]}
       />
       <Breadcrumbs items={[{ label: 'Méthodes de recherche de fuite' }]} />
 
-      {/* Hero */}
-      <PageHero>
-        <h1 className="font-sora text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-          Méthodes de recherche de fuite sans destruction
+      <PageHero backgroundImage="/images/methodes-hero.jpg">
+        <Badge variant="outline" className="text-white border-white/20 mb-4">
+          Technologies & Savoir-faire
+        </Badge>
+        <h1 className="font-sora text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-balance">
+          Nos Méthodes de Recherche de Fuite Sans Destruction à Lyon
         </h1>
-        <p className="text-lg text-blue-100 leading-relaxed">
-          Une fuite d&apos;eau n&apos;est pas toujours visible immédiatement. Elle peut
-          se situer dans une canalisation enterrée, sous une dalle ou dans le
-          réseau hydraulique d&apos;une piscine. Pour localiser précisément
-          l&apos;origine du problème, différentes méthodes de détection peuvent
-          être utilisées. Ces techniques permettent généralement de trouver une
-          fuite sans casser inutilement les sols ou les murs.
+        <p className="text-lg text-blue-100 leading-relaxed max-w-3xl mb-8">
+          Pour chaque fuite, sa technologie. <strong>Répère Fuite</strong> déploie un arsenal de méthodes 
+          non destructives pour localiser l'origine de votre sinistre avec une précision millimétrique.
         </p>
+        <div className="flex flex-wrap gap-4">
+          <Button href={siteConfig.phoneTel} variant="accent" size="lg">
+            Diagnostiquer ma fuite
+          </Button>
+          <Button href="/contact" variant="white">
+            Demander un devis
+          </Button>
+        </div>
       </PageHero>
 
-      {/* Pourquoi */}
-      <section className="py-16 lg:py-20 bg-light">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <h2 className="font-sora text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              Pourquoi utiliser des méthodes de détection de fuite ?
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Lorsqu&apos;une fuite n&apos;est pas visible, il est souvent difficile
-              d&apos;identifier précisément l&apos;endroit où l&apos;eau s&apos;échappe.
-              Les méthodes de recherche de fuite permettent d&apos;analyser le réseau
-              et de localiser la zone du problème avec précision.
+      <div className="bg-white">
+        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 space-y-24">
+          {/* Introduction */}
+          <section className="prose prose-blue max-w-none">
+            <p className="text-xl text-gray-600 leading-relaxed italic border-l-4 border-primary pl-6 py-2">
+              L'époque où l'on ouvrait des tranchées au hasard pour chercher un tuyau percé est révolue. Aujourd'hui, la recherche de fuite est une affaire d'équipement de pointe et d'expérience technique.
             </p>
-            <div className="flex flex-wrap gap-3">
-              {['Éviter des travaux inutiles', 'Éviter des recherches destructives', 'Éviter des réparations approximatives'].map((item) => (
-                <span key={item} className="px-4 py-2 bg-white rounded-lg text-sm text-gray-700 shadow-sm border border-gray-100">
-                  {item}
-                </span>
+            <p>
+              À Lyon, les interventions de <strong>Répère Fuite</strong> reposent sur un principe fondamental : la préservation de vos supports. Que vous ayez un marbre précieux, une terrasse en carrelage grand format ou un jardin paysager, nous mettons tout en œuvre pour localiser le dégât des eaux sans rien casser.
+            </p>
+            <p>
+              Nos techniciens ne se contentent pas d&apos;utiliser une seule méthode. La force de notre diagnostic réside dans le <strong>croisement des technologies</strong>. Si l&apos;acoustique pointe une zone, le gaz traceur viendra confirmer le point exact de la fuite. C&apos;est cette rigueur qui nous permet d&apos;afficher un taux de réussite quasi total et de satisfaire les exigences des compagnies d&apos;assurance.
+            </p>
+          </section>
+
+          <MiddleCTA />
+
+          {/* Maillage inter-pages stratégique */}
+          <section className="bg-primary/5 p-8 rounded-3xl border border-primary/10">
+            <h3 className="font-sora font-bold text-gray-900 mb-4">Appliquer ces méthodes par domaine :</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <Link href="/recherche-fuite-habitation" className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <Search className="w-5 h-5 text-primary" />
+                <span className="text-sm font-medium">Habitation</span>
+              </Link>
+              <Link href="/recherche-fuite-piscine" className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <Droplets className="w-5 h-5 text-primary" />
+                <span className="text-sm font-medium">Piscine</span>
+              </Link>
+              <Link href="/recherche-fuite-reseau-enterre" className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <MapPin className="w-5 h-5 text-primary" />
+                <span className="text-sm font-medium">Réseau Enterré</span>
+              </Link>
+            </div>
+          </section>
+
+          {/* Liste des méthodes détaillée */}
+          <section className="space-y-16">
+            <h2 className="font-sora text-3xl font-bold text-gray-900 mb-12 text-center text-balance">
+              Le détail de nos technologies embarquées
+            </h2>
+            <div className="grid grid-cols-1 gap-12">
+              {methodes.map((methode, i) => (
+                <FadeIn key={i}>
+                  <div className="group flex flex-col md:flex-row gap-8 items-start p-8 rounded-[2rem] bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                      <methode.icon className="w-8 h-8 text-primary group-hover:text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-sora text-xl font-bold text-gray-900 mb-3">{methode.title}</h3>
+                      <p className="text-gray-600 mb-6 leading-relaxed">{methode.description}</p>
+                      
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Applications principales</p>
+                          <ul className="space-y-2">
+                            {methode.usages.map((usage, j) => (
+                              <li key={j} className="flex items-center gap-2 text-sm text-gray-700">
+                                <CheckCircle2 className="w-4 h-4 text-secondary" />
+                                {usage}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="bg-light p-4 rounded-xl border border-gray-100 flex flex-col justify-center">
+                          <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Technologie employée</p>
+                          <p className="text-sm text-gray-900 font-medium italic">"{methode.tech}"</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </FadeIn>
               ))}
             </div>
-          </FadeIn>
-        </div>
-      </section>
+          </section>
 
-      {/* Méthodes détaillées */}
-      {methodes.map((methode, index) => (
-        <section
-          key={index}
-          className={`py-16 lg:py-20 ${index % 2 === 0 ? 'bg-white' : 'bg-light'}`}
-        >
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <FadeIn>
-              <div className="flex items-start gap-4">
-                <div className="shrink-0 w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <methode.icon className="w-7 h-7 text-primary" />
-                </div>
-                <div>
-                  <h2 className="font-sora text-xl sm:text-2xl font-bold text-gray-900 mb-4">
-                    {methode.title}
-                  </h2>
-                  <p className="text-gray-600 leading-relaxed mb-4">
-                    {methode.description}
-                  </p>
-                  <div>
-                    <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
-                      Utilisée pour :
-                    </p>
-                    <ul className="space-y-1">
-                      {methode.usages.map((usage, i) => (
-                        <li key={i} className="flex items-center gap-2 text-gray-700 text-sm">
-                          <span className="w-1.5 h-1.5 bg-secondary rounded-full shrink-0" />
-                          {usage}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+          {/* Rapport assurance & Conclusion */}
+          <section className="bg-dark p-12 rounded-[3rem] text-white">
+            <div className="flex flex-col md:flex-row gap-12 items-center">
+              <div className="shrink-0 w-24 h-24 bg-white/10 rounded-full flex items-center justify-center">
+                <FileText className="w-10 h-10 text-secondary" />
               </div>
-            </FadeIn>
-          </div>
-        </section>
-      ))}
-
-      {/* Rapport assurance */}
-      <section className="py-16 lg:py-20 bg-dark text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
-            <div className="flex items-start gap-4">
-              <FileText className="w-8 h-8 text-secondary shrink-0 mt-1" />
-              <div>
-                <h2 className="font-sora text-2xl sm:text-3xl font-bold mb-4">
-                  Rapport de recherche de fuite pour assurance
-                </h2>
-                <p className="text-blue-100 leading-relaxed mb-4">
-                  À l&apos;issue d&apos;une recherche de fuite, un rapport
-                  d&apos;intervention peut être remis. Ce document précise les
-                  investigations réalisées, les méthodes de détection utilisées et
-                  la localisation probable de l&apos;origine de la fuite.
+              <div className="flex-1">
+                <h2 className="font-sora text-2xl font-bold mb-4">La finalité : Votre rapport d'expertise</h2>
+                <p className="text-blue-100 leading-relaxed mb-6">
+                  Après chaque intervention, nos méthodes se traduisent par un document opposable : le rapport de recherche de fuite. Ce dossier contient les photos des tests, les mesures effectuées et la localisation précise du point de fuite. C&apos;est ce document qui permet la prise en charge des travaux de réparation par votre assurance.
                 </p>
-                <p className="text-blue-100 leading-relaxed mb-4">
-                  Ce rapport peut être transmis à votre assurance, à votre syndic
-                  ou à l&apos;entreprise chargée de la réparation afin de faciliter
-                  la prise en charge du sinistre.
-                </p>
-                <p className="text-blue-200 text-sm">
-                  Les recherches de fuite peuvent également être réalisées à la
-                  demande d&apos;un syndic, d&apos;un expert d&apos;assurance ou
-                  d&apos;une entreprise chargée de la réparation.
-                </p>
+                <div className="flex gap-4">
+                  <Badge variant="primary" className="bg-white/20 text-white border-0">Agréé Assurance</Badge>
+                  <Badge variant="primary" className="bg-white/20 text-white border-0">Non Destructif</Badge>
+                </div>
               </div>
             </div>
-          </FadeIn>
-        </div>
-      </section>
+          </section>
+
+          <FAQ
+            title="Questions sur nos méthodes"
+            items={faqItems}
+          />
+
+        </article>
+      </div>
 
       <CTABanner />
     </>
-  )
+  );
 }

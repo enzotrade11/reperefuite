@@ -48,7 +48,14 @@ export const navLinks = [
       { label: "Infiltration toiture terrasse", href: "/recherche-fuite-terrasse-lyon" },
     ]
   },
-  { label: "Piscine", href: "/recherche-fuite-piscine" },
+  { 
+    label: "Piscine", 
+    href: "/recherche-fuite-piscine",
+    dropdown: [
+      { label: "Recherche de fuite piscine", href: "/recherche-fuite-piscine" },
+      { label: "Piscine enterrée", href: "/detection-fuite-piscine-enterree" },
+    ]
+  },
   { label: "Réseau enterré", href: "/recherche-fuite-reseau-enterre" },
   { label: "Humidité", href: "/diagnostic-humidite" },
   { label: "Méthodes", href: "/methodes-recherche-fuite" },

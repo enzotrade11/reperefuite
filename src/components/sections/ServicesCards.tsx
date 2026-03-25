@@ -1,8 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { Home, Waves, Shovel, ArrowRight } from 'lucide-react'
+import { Home, Shovel, ArrowRight } from 'lucide-react'
 import FadeIn from '@/components/ui/FadeIn'
+import PoolLadder from '@/components/ui/icons/PoolLadder'
 
 const services = [
   {
@@ -13,7 +14,7 @@ const services = [
     href: '/recherche-fuite-habitation',
   },
   {
-    icon: Waves,
+    icon: PoolLadder,
     title: 'Recherche de fuite piscine',
     description:
       "Détection de fuite sur bassin, canalisation enterrée, pièce à sceller, local technique ou réseau hydraulique de piscine.",
