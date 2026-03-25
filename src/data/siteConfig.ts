@@ -35,7 +35,7 @@ export const siteConfig = {
     name: "Genlead",
     url: "https://genlead.fr",
   },
-  web3formsKey: "YOUR_WEB3FORMS_KEY",
+  web3formsKey: "c7e3c242-ab85-405c-9c02-7a072a04a323",
 }
 
 export const navLinks = [
