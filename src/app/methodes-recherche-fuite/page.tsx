@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Ear, Wind, Camera, TestTube2, Cloud, Radio, FileText, CheckCircle2, ArrowRight, Info, Search, ShieldCheck, Droplets, MapPin, Gauge } from 'lucide-react'
+import { Ear, Wind, Camera, TestTube2, Cloud, Radio, FileText, CheckCircle2, ArrowRight, Info, Search, ShieldCheck, Droplets, MapPin, Gauge, Thermometer } from 'lucide-react'
 import Breadcrumbs from '@/components/layout/Breadcrumbs'
 import FAQ from '@/components/sections/FAQ'
 import CTABanner from '@/components/sections/CTABanner'
