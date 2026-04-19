@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import MiddleCTA from '@/components/sections/MiddleCTA'
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
@@ -28,6 +28,16 @@ export default function NordIserePage() {
                 Nos techniciens localisent vos fuites d'eau avec précision et sans rien casser.
               </p>
               
+              <div className="mt-8 p-6 bg-primary/5 rounded-2xl border border-primary/10">
+                <h2 className="text-xl font-bold text-gray-900 mb-3 font-sora">
+                  Spécialistes locaux :
+                </h2>
+                <Link href="/zones-intervention/nord-isere/recherche-fuite-piscine-bourgoin-jallieu" className="text-secondary font-medium hover:underline flex items-center group">
+                  <ArrowRight className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" />
+                  Recherche de fuite piscine à Bourgoin-Jallieu
+                </Link>
+              </div>
+
               <div className="mt-12 overflow-hidden rounded-2xl shadow-md border border-gray-100 bg-white">
                 <Image
                   src="/images/intervention-charvieu-infiltration.jpg"
