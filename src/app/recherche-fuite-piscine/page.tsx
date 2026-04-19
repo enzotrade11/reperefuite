@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle2, ArrowRight, Droplets, MapPin, Wrench, Info, Thermometer, Gauge, Camera, FileText } from 'lucide-react'
+import { CheckCircle2, ArrowRight, Droplets, MapPin, Wrench, Info, Thermometer, Gauge, Camera, FileText, FlaskConical, Headphones } from 'lucide-react'
 import Breadcrumbs from '@/components/layout/Breadcrumbs'
 import FAQ from '@/components/sections/FAQ'
 import CTABanner from '@/components/sections/CTABanner'
@@ -155,13 +155,13 @@ export default function PiscinePage() {
               {[
                 {
                   title: "Le Gaz Traceur (Spécial Canalisation)",
-                  icon: Gauge,
+                  icon: FlaskConical,
                   desc: "Nous mettons sous pression le circuit suspect avec un mélange d'azote et d'hydrogène. Le gaz remonte à la surface à l'endroit précis de la rupture de canalisation, même sous la dalle de béton ou la terre.",
-                  method: "Indispensable pour vos réseaux enterrés entre la piscine et le local technique.",
+                  method: "Indispensable pour vos canalisations enterrées entre la piscine et le local technique.",
                 },
                 {
                   title: "L'électro-acoustique (Écoute des réseaux)",
-                  icon: PoolLadder,
+                  icon: Headphones,
                   desc: "Nos techniciens utilisent des capteurs sonores haute précision pour localiser le bruit généré par la fuite d'eau sous pression. Cette écoute active permet de cibler la zone sinistrée avec une grande fiabilité.",
                   method: "Efficace sur les réseaux hydrauliques et les pièces à sceller.",
                 },
@@ -173,7 +173,7 @@ export default function PiscinePage() {
                 },
                 {
                   title: "Les tests de mise en pression",
-                  icon: Droplets,
+                  icon: Gauge,
                   desc: "Chaque circuit (aspiration, refoulement, prise balai) est isolé et testé individuellement pour confirmer l'étanchéité ou localiser le réseau défaillant avant d'approfondir la recherche locale.",
                   method: "Étape fondamentale pour cerner le périmètre de la recherche.",
                 },

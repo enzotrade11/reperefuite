@@ -19,7 +19,7 @@ export default function PageHero({ children, backgroundImage = '/images/hero-bg.
         priority
         quality={90}
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/85 to-primary-light/80" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-blue-900/90" />
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>{children}</FadeIn>
       </div>

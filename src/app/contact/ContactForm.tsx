@@ -10,7 +10,7 @@ import FadeIn from '@/components/ui/FadeIn'
 const sidebarLinks = [
   { label: 'Recherche de fuite habitation', href: '/recherche-fuite-habitation' },
   { label: 'Recherche de fuite piscine', href: '/recherche-fuite-piscine' },
-  { label: 'Recherche de fuite réseau enterré', href: '/recherche-fuite-reseau-enterre' },
+  { label: 'Recherche de fuite canalisation enterrée', href: '/recherche-fuite-canalisation-enterree' },
   { label: 'Diagnostic humidité', href: '/diagnostic-humidite' },
 ]
 
@@ -172,7 +172,7 @@ export default function ContactForm() {
                           <option value="">Sélectionner...</option>
                           <option value="fuite-habitation">Fuite habitation</option>
                           <option value="fuite-piscine">Fuite piscine</option>
-                          <option value="fuite-reseau">Fuite réseau enterré</option>
+                          <option value="fuite-reseau">Fuite canalisation enterrée</option>
                           <option value="humidite">Humidité / Infiltration</option>
                           <option value="autre">Autre</option>
                         </select>
@@ -230,10 +230,15 @@ export default function ContactForm() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <p className="text-gray-500 text-sm mt-4">
-                RepereFuite intervient dans un rayon d&apos;environ 50 km autour de
-                l&apos;est lyonnais.
-              </p>
+              <div className="text-gray-500 text-sm mt-4 space-y-2">
+                <p>
+                  RepereFuite intervient dans un rayon d&apos;environ 50 km autour de
+                  l&apos;est lyonnais.
+                </p>
+                <p className="text-xs opacity-60">
+                  Siège : 12 ch. Maurice Ferreol, 69120 Vaulx-en-Velin
+                </p>
+              </div>
             </FadeIn>
           </div>
 

@@ -26,7 +26,7 @@ import { siteConfig } from '@/data/siteConfig'
 export const metadata: Metadata = {
   title: 'Détection fuite piscine enterrée Lyon | Sans Casse | Répère Fuite',
   description:
-    "Votre piscine perd de l'eau ? Localisation fuite réseau enterré au centimètre près, sans vider le bassin ni casser une seule dalle.",
+    "Votre piscine perd de l'eau ? Localisation fuite canalisation enterrée au centimètre près, sans vider le bassin ni casser une seule dalle.",
   alternates: {
     canonical: "https://reperefuite.fr/detection-fuite-piscine-enterree",
   },
@@ -39,7 +39,7 @@ const faqItems = [
   },
   {
     question: "Faut-il vider la piscine pour la détection ?",
-    answer: "Non, c'est même déconseillé ! Je travaille sur bassin en eau pour observer le circuit complet. L'objectif est de trouver la fuite de manière non destructive.",
+    answer: "Non, c'est même déconseillé ! Nous travaillons sur bassin en eau pour observer le circuit complet. L'objectif est de trouver la fuite de manière non destructive.",
   },
   {
     question: "Combien de temps dure une intervention ?",
@@ -47,11 +47,11 @@ const faqItems = [
   },
   {
     question: "Est-ce que vous faites aussi la réparation ?",
-    answer: "Je suis spécialisé exclusivement dans la détection. Cette indépendance vous garantit un diagnostic impartial : je n'ai aucun intérêt à vous gonfler un devis de réparation. Mon rapport détaillé permet ensuite à votre pisciniste de réparer avec précision.",
+    answer: "Nous sommes spécialisés exclusivement dans la détection. Cette indépendance vous garantit un diagnostic impartial : nous n'avons aucun intérêt à vous gonfler un devis de réparation. Notre rapport détaillé permet ensuite à votre pisciniste de réparer avec précision.",
   },
   {
     question: "L'assurance habitation prend-elle en charge la détection ?",
-    answer: "Certaines assurances remboursent tout ou partie de la détection dans le cadre de la garantie 'Dégâts des eaux'. Mon rapport d'intervention écrit avec localisation précise est un document recevable par votre assureur. Je vous conseille de contacter votre compagnie avant l'intervention pour vérifier votre contrat.",
+    answer: "Certaines assurances remboursent tout ou partie de la détection dans le cadre de la garantie 'Dégâts des eaux'. Notre rapport d'intervention écrit avec localisation précise est un document recevable par votre assureur. Nous vous conseillons de contacter votre compagnie avant l'intervention pour vérifier votre contrat.",
   },
 ];
 
@@ -87,14 +87,14 @@ export default function PiscineEnterreePage() {
           Sans creuser. Sans démolir.
         </h2>
         <p className="text-lg text-blue-100/90 leading-relaxed max-w-3xl mb-8">
-          Votre piscine perd de l'eau et vous ne savez pas d'où ça vient ? Je localise la fuite sur votre réseau enterré au centimètre près, sans vider le bassin ni casser une seule dalle.
+          Votre piscine perd de l'eau et vous ne savez pas d'où ça vient ? Nous localisons la fuite sur votre canalisation enterrée au centimètre près, sans vider le bassin ni casser une seule dalle.
         </p>
         <div className="flex flex-wrap gap-4 items-center">
           <Button href={siteConfig.phoneTel} variant="accent" size="lg" className="text-lg">
             {siteConfig.phoneDisplay}
           </Button>
           <Button href="#methode" variant="white" className="bg-transparent text-white border-white hover:bg-white hover:text-primary">
-            Voir comment je travaille ↓
+            Voir comment nous travaillons ↓
           </Button>
         </div>
         
@@ -128,7 +128,7 @@ export default function PiscineEnterreePage() {
               Votre piscine a peut-être une fuite enterrée si...
             </h2>
             <p className="text-lg text-gray-600 mb-8 max-w-3xl">
-              Pas toujours évident à identifier. Une fuite sur le réseau enterré d'une piscine peut passer des semaines inaperçue. Voici les signaux qui ne trompent pas.
+              Pas toujours évident à identifier. Une fuite sur la canalisation enterrée d'une piscine peut passer des semaines inaperçue. Voici les signaux qui ne trompent pas.
             </p>
 
             <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-12 shadow-sm relative overflow-hidden">
@@ -173,20 +173,20 @@ export default function PiscineEnterreePage() {
 
           {/* Ma méthode d'intervention */}
           <section id="methode" className="scroll-mt-24">
-            <span className="text-secondary font-semibold tracking-wider text-sm uppercase mb-2 block">Ma méthode d'intervention</span>
+            <span className="text-secondary font-semibold tracking-wider text-sm uppercase mb-2 block">Notre méthode d'intervention</span>
             <h2 className="font-sora text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
               Comment se passe la détection ?
             </h2>
             <p className="text-lg text-gray-600 mb-12 max-w-3xl">
-              Une approche méthodique en 4 étapes. Je travaille de façon non invasive : votre piscine reste en eau, votre dalle intacte.
+              Une approche méthodique en 4 étapes. Nous travaillons de façon non invasive : votre piscine reste en eau, votre dalle intacte.
             </p>
 
             <div className="space-y-8 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-gray-200 before:via-gray-200 before:to-transparent">
               {[
-                { step: "1", tag: "Prise de contact", title: "Échange téléphonique & devis", desc: "Avant toute intervention, on fait le point ensemble sur les symptômes, le type de piscine et les accès. Je vous donne un devis clair, sans surprise. Aucun déplacement inutile." },
-                { step: "2", tag: "Sur site", title: "Inspection visuelle & tests préliminaires", desc: "J'observe l'état du bassin, des skimmers, des refoulements et des équipements. Des tests de pression permettent d'isoler le circuit en cause : aspirant, refoulement ou structure." },
-                { step: "3", tag: "Détection active", title: "Techniques non destructives ciblées", desc: "Écoute acoustique sur les canalisations enterrées, injection de gaz traceur sous pression, caméra endoscopique dans les tuyaux. Je m'adapte à votre configuration pour trouver précisément la fuite." },
-                { step: "4", tag: "Bilan", title: "Rapport d'intervention détaillé", desc: "Je vous remets un rapport complet avec photos et marquage au sol de la zone à réparer, exploitable par un pisciniste et valable pour votre assurance." }
+                { step: "1", tag: "Prise de contact", title: "Échange téléphonique & devis", desc: "Avant toute intervention, on fait le point ensemble sur les symptômes, le type de piscine et les accès. Nous vous donnons un devis clair, sans surprise. Aucun déplacement inutile." },
+                { step: "2", tag: "Sur site", title: "Inspection visuelle & tests préliminaires", desc: "Nous observons l'état du bassin, des skimmers, des refoulements et des équipements. Des tests de pression permettent d'isoler le circuit en cause : aspirant, refoulement ou structure." },
+                { step: "3", tag: "Détection active", title: "Techniques non destructives ciblées", desc: "Écoute acoustique sur les canalisations enterrées, injection de gaz traceur sous pression, caméra endoscopique dans les tuyaux. Nous nous adaptons à votre configuration pour trouver précisément la fuite." },
+                { step: "4", tag: "Bilan", title: "Rapport d'intervention détaillé", desc: "Nous vous remettons un rapport complet avec photos et marquage au sol de la zone à réparer, exploitable par un pisciniste et valable pour votre assurance." }
               ].map((item, i) => (
                 <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-primary text-white font-bold shrink-0 md:order-1 md:group-odd:-ml-6 md:group-even:-mr-6 shadow-sm z-10 transition-transform group-hover:scale-110 duration-300">
@@ -216,7 +216,7 @@ export default function PiscineEnterreePage() {
                 Les techniques de détection utilisées
               </h2>
               <p className="text-lg text-blue-100 mb-12 max-w-2xl leading-relaxed">
-                Chaque situation est différente. J'utilise les outils adaptés à votre type de piscine et à la configuration du réseau enterré.
+                Chaque situation est différente. Nous utilisons les outils adaptés à votre type de piscine et à la configuration de la canalisation enterrée.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6">
@@ -252,12 +252,12 @@ export default function PiscineEnterreePage() {
 
             <div className="space-y-4 max-w-3xl">
               {[
-                "Aucune destruction inutile — je cible exactement l'endroit à ouvrir, pas plus",
+                "Aucune destruction inutile — nous ciblons exactement l'endroit à ouvrir, pas plus",
                 "Piscine maintenue en eau pendant toute l'intervention",
                 "Rapport exploitable par n'importe quel pisciniste ou plombier pour la réparation",
                 "Intervention sur tous types de piscines : béton, coque polyester, liner, carrelage",
                 "Devis transparent avant intervention — pas de mauvaise surprise",
-                "Artisan indépendant, pas de franchise : vous avez mon numéro direct",
+                "Artisan indépendant, pas de franchise : vous avez notre numéro direct",
                 "Zone d'intervention : Lyon, Rhône, Ain, Isère, Loire — rayon 40 km"
               ].map((text, i) => (
                 <div key={i} className="flex gap-4 items-start p-4 bg-light/50 border border-gray-100 rounded-xl hover:shadow-md hover:bg-white transition-all">
@@ -286,7 +286,7 @@ export default function PiscineEnterreePage() {
               Détection fuite piscine Lyon & région
             </h2>
             <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
-              J'interviens dans un rayon de 40 km autour de Vaulx-en-Velin, sur les départements du Rhône, de l'Ain, de l'Isère et de la Loire.
+              Nous intervenons dans un rayon de 40 km autour de Vaulx-en-Velin, sur les départements du Rhône, de l'Ain, de l'Isère et de la Loire.
             </p>
             
             <div className="flex flex-wrap justify-center gap-3 mb-10">

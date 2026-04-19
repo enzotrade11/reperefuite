@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Ear, Wind, Camera, TestTube2, Cloud, Radio, FileText, CheckCircle2, ArrowRight, Info, Search, ShieldCheck, Droplets, MapPin, Gauge } from 'lucide-react'
+import { Ear, Wind, Camera, TestTube2, Cloud, Radio, FileText, CheckCircle2, ArrowRight, Info, Search, ShieldCheck, Droplets, MapPin, Gauge, Headphones, FlaskConical, Thermometer } from 'lucide-react'
 import Breadcrumbs from '@/components/layout/Breadcrumbs'
 import FAQ from '@/components/sections/FAQ'
 import CTABanner from '@/components/sections/CTABanner'
@@ -47,7 +47,7 @@ const faqItems = [
 
 const methodes = [
   {
-    icon: Ear,
+    icon: Headphones,
     title: 'Détection Électro-Acoustique',
     description:
       "L'eau qui sort d'un tuyau sous pression crée une vibration acoustique unique. Nos microphones de sol ultra-sensibles captent cette fréquence de bruit de fuite à travers le béton, le carrelage ou la terre.",
@@ -59,7 +59,7 @@ const methodes = [
     tech: "Amplification numérique des bruits de fuite.",
   },
   {
-    icon: Gauge,
+    icon: FlaskConical,
     title: 'Injection de Gaz Traceur',
     description:
       "On injecte un mélange azote-hydrogène (gaz léger et neutre) après avoir vidé la canalisation suspecte. Le gaz remonte verticalement au point de rupture et traverse même les matériaux les plus denses.",
@@ -179,9 +179,9 @@ export default function MethodesPage() {
                 <Droplets className="w-5 h-5 text-primary" />
                 <span className="text-sm font-medium">Piscine</span>
               </Link>
-              <Link href="/recherche-fuite-reseau-enterre" className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <Link href="/recherche-fuite-canalisation-enterree" className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span className="text-sm font-medium">Réseau Enterré</span>
+                <span className="text-sm font-medium">Canalisation Enterrée</span>
               </Link>
             </div>
           </section>

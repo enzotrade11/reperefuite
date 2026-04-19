@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: '%s | RepereFuite',
   },
   description:
-    "RepereFuite est spécialisé dans la recherche de fuite sans destruction dans l'Est lyonnais, le Nord Isère et le Sud Ain. Habitation, piscine, réseau enterré.",
+    "RepereFuite est spécialisé dans la recherche de fuite sans destruction dans l'Est lyonnais, le Nord Isère et le Sud Ain. Habitation, piscine, canalisation enterrée.",
   keywords: [
     'recherche de fuite',
     'fuite eau',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     'Est lyonnais',
     'fuite piscine',
     'fuite habitation',
-    'réseau enterré',
+    'canalisation enterrée',
   ],
   openGraph: {
     type: 'website',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: 'RepereFuite',
     title: 'RepereFuite | Recherche de fuite sans destruction',
     description:
-      "Spécialisé dans la localisation de fuites d'eau dans les habitations, piscines et réseaux enterrés, sans destruction inutile.",
+      "Spécialisé dans la localisation de fuites d'eau dans les habitations, piscines et canalisations enterrées, sans destruction inutile.",
   },
   robots: {
     index: true,

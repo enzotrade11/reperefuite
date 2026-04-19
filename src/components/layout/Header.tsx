@@ -22,22 +22,26 @@ export default function Header() {
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-40 transition-all duration-300',
+          'fixed top-0 left-0 right-0 z-40 transition-all duration-300 flex flex-col',
           scrolled
             ? 'bg-white/95 backdrop-blur-md shadow-sm'
             : 'bg-white'
         )}
       >
+        {/* Banner assurance */}
+        <div className="w-full bg-slate-900 text-blue-50 text-xs sm:text-sm font-medium text-center py-1.5 px-4 tracking-wide">
+          <span className="inline-block mr-2 text-secondary font-bold">✓</span> Rapport pour assurance remis sous 24/48h
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-[77px] lg:h-24">
+          <div className="flex items-center justify-between h-[88px] lg:h-[148px]">
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0">
               <Image
                 src="/images/logo-reperefuite.png"
                 alt="RepereFuite - Recherche de fuite sans destruction"
-                width={324}
-                height={90}
-                className="h-[77px] lg:h-24 w-auto"
+                width={460}
+                height={690}
+                className="h-[88px] lg:h-[148px] w-auto object-contain"
                 priority
               />
             </Link>
@@ -97,7 +101,7 @@ export default function Header() {
       <MobileMenu isOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
 
       {/* Spacer */}
-      <div className="h-[77px] lg:h-24" />
+      <div className="h-[120px] lg:h-[180px]" />
     </>
   )
 }

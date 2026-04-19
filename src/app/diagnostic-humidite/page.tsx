@@ -31,7 +31,7 @@ const faqItems = [
   {
     question: "Qu'est-ce que les remontées capillaires ?",
     answer:
-      "C'est l'humidité du sol qui remonte dans les murs par porosité. Cela se manifeste par du salpêtre, des peintures qui cloquent en bas des murs et une odeur de terre. Le diagnostic permet de les différencier d'une fuite de réseau enterré.",
+      "C'est l'humidité du sol qui remonte dans les murs par porosité. Cela se manifeste par du salpêtre, des peintures qui cloquent en bas des murs et une odeur de terre. Le diagnostic permet de les différencier d'une fuite de canalisation enterrée.",
   },
   {
     question: "L'assurance prend-elle en charge le diagnostic humidité ?",

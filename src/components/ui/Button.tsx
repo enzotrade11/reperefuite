@@ -26,10 +26,10 @@ export default function Button({
     'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 gap-2'
 
   const variants = {
-    primary: 'bg-primary text-white hover:bg-primary-light shadow-lg shadow-primary/25',
-    accent: 'bg-accent text-white hover:bg-red-600 shadow-lg shadow-accent/25',
-    outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white',
-    white: 'bg-white text-primary hover:bg-gray-100 shadow-lg',
+    primary: 'bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/25',
+    accent: 'bg-accent text-white hover:opacity-90 shadow-lg shadow-accent/25',
+    outline: 'border-2 border-primary text-primary hover:opacity-90',
+    white: 'bg-white text-primary hover:opacity-90 shadow-lg',
   }
 
   const sizes = {

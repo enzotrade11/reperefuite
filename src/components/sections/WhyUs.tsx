@@ -7,7 +7,7 @@ import PoolLadder from '@/components/ui/icons/PoolLadder'
 const reasons = [
   'Localisation précise de la fuite',
   'Méthodes de détection sans casse',
-  'Intervention sur habitation, piscine et réseau enterré',
+  'Intervention sur habitation, piscine et canalisation enterrée',
   "Diagnostic technique de l'origine des problèmes liés à l'eau",
   'Aide à la compréhension du problème avant réparation',
 ]

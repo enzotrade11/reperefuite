@@ -1,4 +1,5 @@
 import Hero from '@/components/sections/Hero'
+import AssurancesCarousel from '@/components/sections/AssurancesCarousel'
 import SituationsGrid from '@/components/sections/SituationsGrid'
 import ServicesCards from '@/components/sections/ServicesCards'
 import WhyUs from '@/components/sections/WhyUs'
@@ -25,6 +26,7 @@ export default function HomePage() {
     <>
       <JsonLd />
       <Hero />
+      <AssurancesCarousel />
 
       {/* Introduction SEO riche */}
       <section className="bg-white py-16 lg:py-24">

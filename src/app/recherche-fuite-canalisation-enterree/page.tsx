@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle2, ArrowRight, Droplets, MapPin, Wrench, Info, Gauge, Camera, FileText, Shovel, Search } from 'lucide-react'
+import { CheckCircle2, ArrowRight, Droplets, MapPin, Wrench, Info, Gauge, Camera, FileText, Shovel, Search, Waves, FlaskConical, Headphones } from 'lucide-react'
 import Breadcrumbs from '@/components/layout/Breadcrumbs'
 import FAQ from '@/components/sections/FAQ'
 import CTABanner from '@/components/sections/CTABanner'
@@ -14,11 +14,11 @@ import Button from '@/components/ui/Button'
 import { siteConfig } from '@/data/siteConfig'
 
 export const metadata: Metadata = {
-  title: 'Recherche de Fuite Réseau Enterré Lyon | Détection après compteur sans casse',
+  title: 'Recherche de Fuite Canalisation Enterrée Lyon | Détection après compteur sans casse',
   description:
     "Surconsommation d'eau ? Votre compteur tourne sans arrêt ? Répère Fuite localise les fuites sur canalisations enterrées à Lyon et Est Lyonnais sans tranchée inutile.",
   alternates: {
-    canonical: "https://reperefuite.fr/recherche-fuite-reseau-enterre",
+    canonical: "https://reperefuite.fr/recherche-fuite-canalisation-enterree",
   },
 };
 
@@ -45,31 +45,31 @@ const faqItems = [
   },
 ];
 
-export default function ReseauEnterrePage() {
+export default function CanalisationEnterreePage() {
   return (
     <>
       <JsonLd faqItems={faqItems} />
       <BreadcrumbJsonLd
         items={[
           {
-            label: "Recherche de fuite réseau enterré",
-            href: "/recherche-fuite-reseau-enterre",
+            label: "Recherche de fuite canalisation enterrée",
+            href: "/recherche-fuite-canalisation-enterree",
           },
         ]}
       />
-      <Breadcrumbs items={[{ label: "Recherche de fuite réseau enterré" }]} />
+      <Breadcrumbs items={[{ label: "Recherche de fuite canalisation enterrée" }]} />
 
       <PageHero backgroundImage="/images/reseau-hero.jpg">
         <Badge variant="outline" className="text-white border-white/20 mb-4">
           Localisation après compteur
         </Badge>
         <h1 className="font-sora text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-balance">
-          Recherche de Fuite Réseau Enterré à Lyon — Expertise Sans Tranchée
+          Recherche de Fuite Canalisation Enterrée à Lyon — Expertise Sans Tranchée
         </h1>
         <p className="text-lg text-blue-100 leading-relaxed max-w-3xl mb-8">
           Votre facture d'eau s'envole ? Votre compteur tourne alors que tout est fermé ? 
           <strong>Répère Fuite</strong> spécialise dans la détection non destructive de fuites sur canalisations 
-          extérieures et réseaux enterrés dans tout l'Est Lyonnais.
+          extérieures et canalisations enterrées dans tout l'Est Lyonnais.
         </p>
         <div className="flex flex-wrap gap-4">
           <Button href={siteConfig.phoneTel} variant="accent" size="lg">
@@ -86,7 +86,7 @@ export default function ReseauEnterrePage() {
           {/* Introduction */}
           <section className="prose prose-blue max-w-none">
             <p className="text-xl text-gray-600 leading-relaxed italic border-l-4 border-primary pl-6 py-2">
-              Une fuite sur un réseau enterré est invisible mais dévastatrice : elle gaspille des milliers de litres d'eau et peut fragiliser les fondations de votre habitation ou de vos murets de clôture.
+              Une fuite sur une canalisation enterrée est invisible mais dévastatrice : elle gaspille des milliers de litres d'eau et peut fragiliser les fondations de votre habitation ou de vos murets de clôture.
             </p>
             <p>
               À Lyon, les variations de pression et les mouvements de terrain (sécheresse/pluie) sont les principales causes de rupture sur les canalisations d&apos;amenée d&apos;eau potable. Chez <strong>Répère Fuite</strong>, nous intervenons pour stopper cette hémorragie financière et écologique sans transformer votre jardin en champ de mines.
@@ -147,13 +147,13 @@ export default function ReseauEnterrePage() {
               {[
                 {
                   title: "Le Gaz Traceur",
-                  icon: Gauge,
+                  icon: FlaskConical,
                   desc: "Mélange d'azote et d'hydrogène injecté sous pression. Le gaz s'échappe par la fuite et remonte à la verticale, traversant terre, goudron ou béton. Nos capteurs détectent alors la concentration de gaz en surface.",
                   method: "Précision chirurgicale pour les fuites les plus complexes.",
                 },
                 {
                   title: "Écoute Électro-acoustique",
-                  icon: Waves,
+                  icon: Headphones,
                   desc: "L'eau qui s'échappe crée une vibration sonore spécifique. Nous utilisons des micros de sol ultra-sensibles qui filtrent les bruits ambiants pour n'isoler que la fréquence de la fuite.",
                   method: "Idéal pour les réseaux sous pression constante.",
                 },

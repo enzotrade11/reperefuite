@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/recherche-fuite-habitation',
     '/recherche-fuite-piscine',
-    '/recherche-fuite-reseau-enterre',
+    '/recherche-fuite-canalisation-enterree',
     '/recherche-fuite-terrasse-lyon',
     '/diagnostic-humidite',
     '/diagnostic-infiltration-toiture',

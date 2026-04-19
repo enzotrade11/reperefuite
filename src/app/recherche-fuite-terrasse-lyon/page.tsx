@@ -13,6 +13,7 @@ import {
   Camera,
   Thermometer,
   Info,
+  FlaskConical,
 } from "lucide-react";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import FAQ from "@/components/sections/FAQ";
@@ -263,7 +264,7 @@ export default function TerrasseLyonPage() {
                 },
                 {
                   title: "Le test d'injection de gaz traceur",
-                  icon: Gauge,
+                  icon: FlaskConical,
                   desc: "Nous injectons un mélange d'azote et d'hydrogène (gaz totalement inoffensif) sous la membrane d'étanchéité. Ce gaz étant l'un des plus fins au monde, il s'échappe par la moindre micro-perforation responsable de la fuite. À l'aide d'un détecteur ultra-sensible (renifleur), nous localisons la sortie exacte du gaz.",
                   method:
                     "Pratique pour les terrasses carrelées ou végétalisées où l'accès direct à l'étanchéité est impossible.",

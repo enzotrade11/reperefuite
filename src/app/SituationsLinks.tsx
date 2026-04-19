@@ -9,7 +9,7 @@ const situations = [
   { label: 'Fuite sous dalle', href: '/recherche-fuite-habitation' },
   { label: 'Fuite piscine', href: '/recherche-fuite-piscine' },
   { label: "Infiltration d'eau dans une pièce", href: '/diagnostic-humidite' },
-  { label: 'Fuite après compteur', href: '/recherche-fuite-reseau-enterre' },
+  { label: 'Fuite après compteur', href: '/recherche-fuite-canalisation-enterree' },
   { label: 'Diagnostic humidité', href: '/diagnostic-humidite' },
 ]
 

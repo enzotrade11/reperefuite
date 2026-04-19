@@ -8,7 +8,7 @@ const serviceLinks = [
   { label: 'Recherche fuite sans destruction', href: '/' },
   { label: 'Recherche fuite habitation', href: '/recherche-fuite-habitation' },
   { label: 'Recherche fuite piscine', href: '/recherche-fuite-piscine' },
-  { label: 'Recherche fuite réseau enterré', href: '/recherche-fuite-reseau-enterre' },
+  { label: 'Recherche fuite canalisation enterrée', href: '/recherche-fuite-canalisation-enterree' },
   { label: 'Diagnostic humidité', href: '/diagnostic-humidite' },
   { label: 'Infiltration toiture terrasse', href: '/diagnostic-infiltration-toiture' },
   { label: 'Recherche fuite terrasse Lyon', href: '/recherche-fuite-terrasse-lyon' },
@@ -47,7 +47,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-1.5">
                 <Shovel className="w-3.5 h-3.5 text-secondary" />
-                <span>Réseau enterré</span>
+                <span>Canalisation enterrée</span>
               </div>
             </div>
             <div className="mt-6 space-y-3">

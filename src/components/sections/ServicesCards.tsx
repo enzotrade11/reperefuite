@@ -22,10 +22,10 @@ const services = [
   },
   {
     icon: Shovel,
-    title: 'Recherche de fuite réseau enterré',
+    title: 'Recherche de fuite canalisation enterrée',
     description:
       "Localisation précise des fuites sur canalisations enterrées, alimentation d'eau, fuite après compteur ou réseau extérieur.",
-    href: '/recherche-fuite-reseau-enterre',
+    href: '/recherche-fuite-canalisation-enterree',
   },
 ]
 

@@ -10,13 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0C4DA2',
-          light: '#1A6FDB',
+          DEFAULT: '#187FE1',
+          light: '#3693EE',
         },
         secondary: '#00B4D8',
         accent: {
-          DEFAULT: '#E53E3E',
-          warm: '#F97316',
+          DEFAULT: '#ea580c',
+          warm: '#ea580c',
         },
         dark: '#0F172A',
         light: '#F8FAFC',
@@ -37,6 +37,15 @@ const config: Config = {
       fontFamily: {
         sora: ['var(--font-heading)', 'Space Grotesk', 'sans-serif'],
         sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 60s linear infinite',
       },
     },
   },

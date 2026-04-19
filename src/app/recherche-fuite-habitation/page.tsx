@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle2, ArrowRight, Droplets, Gauge, Home, Eye, Wrench, MapPin, FileText, Camera, Thermometer, Info } from 'lucide-react'
+import { CheckCircle2, ArrowRight, Droplets, Gauge, Home, Eye, Wrench, MapPin, FileText, Camera, Thermometer, Info, FlaskConical, Headphones } from 'lucide-react'
 import Breadcrumbs from '@/components/layout/Breadcrumbs'
 import FAQ from '@/components/sections/FAQ'
 import CTABanner from '@/components/sections/CTABanner'
@@ -121,8 +121,8 @@ export default function HabitationPage() {
           <Link href="/recherche-fuite-piscine" className="text-primary hover:underline flex items-center gap-1">
             Recherche de fuite piscine <ArrowRight className="w-3 h-3" />
           </Link>
-          <Link href="/recherche-fuite-reseau-enterre" className="text-primary hover:underline flex items-center gap-1">
-            Recherche de fuite réseau enterré <ArrowRight className="w-3 h-3" />
+          <Link href="/recherche-fuite-canalisation-enterree" className="text-primary hover:underline flex items-center gap-1">
+            Recherche de fuite canalisation enterrée <ArrowRight className="w-3 h-3" />
           </Link>
           <Link href="/recherche-fuite-terrasse-lyon" className="text-primary hover:underline flex items-center gap-1">
             Recherche de fuite toiture terrasse <ArrowRight className="w-3 h-3" />
@@ -186,15 +186,15 @@ export default function HabitationPage() {
               {[
                 {
                   title: "La détection électro-acoustique",
-                  icon: Home,
+                  icon: Headphones,
                   desc: "L'eau qui s'échappe d'une canalisation sous pression génère un bruit spécifique, inaudible à l'oreille nue. Grâce à notre matériel électro-acoustique ultrasensible avec filtrage des fréquences parasites, nous 'écoutons' vos murs et vos sols pour localiser la source de l'écoulement.",
                   method: "Idéal pour les canalisations d'eau sanitaire sous dalle ou encastrées dans les cloisons pleines.",
                 },
                 {
                   title: "L'injection de gaz traceur",
-                  icon: Gauge,
+                  icon: FlaskConical,
                   desc: "Nous vidangeons la canalisation concernée pour y injecter un mélange inodore, incolore et non toxique (95% azote, 5% hydrogène). Ce gaz extrêmement volatile traverse les chapes, le béton, les dalles, le carrelage et remonte à la surface au point exact de la fuite.",
-                  method: "Parfait pour les micro-fuites, les réseaux enterrés ou de grande longueur.",
+                  method: "Parfait pour les micro-fuites, les canalisations enterrées ou de grande longueur.",
                 },
                 {
                   title: "L'inspection thermographique (Caméra Infrarouge)",
