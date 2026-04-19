@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import AssurancesCarousel from '@/components/sections/AssurancesCarousel'
 import MiddleCTA from '@/components/sections/MiddleCTA'
 
 export const metadata: Metadata = {
@@ -67,6 +68,8 @@ export default function ZonesInterventionPage() {
         </div>
       </section>
       
+      <AssurancesCarousel />
+
       <MiddleCTA />
     </>
   )

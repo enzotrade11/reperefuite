@@ -42,7 +42,7 @@ export default function AssurancesCarousel() {
       </div>
 
       <div className="relative flex overflow-hidden group">
-        <div className="flex w-max animate-[marquee_120s_linear_infinite] hover:[animation-play-state:paused]">
+        <div className="flex w-max animate-[marquee_240s_linear_infinite] hover:[animation-play-state:paused]">
           {logos.map((assurance, index) => (
             <div
               key={`${assurance.file}-${index}`}

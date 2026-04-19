@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import AssurancesCarousel from '@/components/sections/AssurancesCarousel'
 import { CheckCircle2, ArrowRight, Droplets, Gauge, Home, Eye, Wrench, MapPin, FileText, Camera, Thermometer, Info, FlaskConical, Headphones } from 'lucide-react'
 import Breadcrumbs from '@/components/layout/Breadcrumbs'
 import FAQ from '@/components/sections/FAQ'
@@ -114,6 +115,8 @@ export default function HabitationPage() {
           </Button>
         </div>
       </PageHero>
+
+      <AssurancesCarousel />
 
       {/* Cross links */}
       <section className="py-4 bg-light border-b border-gray-200">
