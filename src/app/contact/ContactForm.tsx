@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Phone, Mail, MapPin, ArrowRight, Send, CheckCircle2 } from 'lucide-react'
+import { Phone, Mail, MapPin, ArrowRight, Send, CheckCircle2, XCircle } from 'lucide-react'
 import Button from '@/components/ui/Button'
 import { siteConfig } from '@/data/siteConfig'
 import FadeIn from '@/components/ui/FadeIn'
@@ -16,11 +16,13 @@ const sidebarLinks = [
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setLoading(true)
+    setError(false)
 
     const form = e.currentTarget
     const formData = new FormData(form)
@@ -33,9 +35,11 @@ export default function ContactForm() {
       if (res.ok) {
         setSubmitted(true)
         form.reset()
+      } else {
+        setError(true)
       }
     } catch {
-      // silently fail
+      setError(true)
     } finally {
       setLoading(false)
     }
@@ -101,13 +105,22 @@ export default function ContactForm() {
                   <div className="text-center py-12">
                     <CheckCircle2 className="w-16 h-16 text-emerald-500 mx-auto mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Message envoyé !
+                      Message envoyé avec succès !
                     </h3>
                     <p className="text-gray-600">
                       Nous vous recontacterons dans les meilleurs délais.
                     </p>
                   </div>
                 ) : (
+                  <>
+                  {error && (
+                    <div className="mb-5 flex items-center gap-3 bg-red-50 border border-red-200 rounded-lg p-4">
+                      <XCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                      <p className="text-sm text-red-700">
+                        Une erreur est survenue lors de l&apos;envoi. Veuillez réessayer ou nous contacter par téléphone.
+                      </p>
+                    </div>
+                  )}
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <input
                       type="hidden"
@@ -225,6 +238,7 @@ export default function ContactForm() {
                       {loading ? 'Envoi...' : 'Envoyer la demande'}
                     </button>
                   </form>
+                  </>
                 )}
               </div>
             </FadeIn>
