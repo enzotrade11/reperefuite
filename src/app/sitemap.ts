@@ -7,6 +7,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     '',
     '/recherche-fuite-habitation',
+    '/fuite-sous-dalle-encastree',
+    '/surconsommation-eau-facture-elevee',
+    '/degat-des-eaux-appartement',
     '/recherche-fuite-piscine',
     '/recherche-fuite-canalisation-enterree',
     '/recherche-fuite-terrasse-lyon',

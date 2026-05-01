@@ -121,6 +121,9 @@ export default function HabitationPage() {
       {/* Cross links */}
       <section className="py-4 bg-light border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap gap-4 text-sm">
+          <Link href="/fuite-sous-dalle-encastree" className="text-primary hover:underline flex items-center gap-1">
+            Fuite sous dalle & encastrée <ArrowRight className="w-3 h-3" />
+          </Link>
           <Link href="/recherche-fuite-piscine" className="text-primary hover:underline flex items-center gap-1">
             Recherche de fuite piscine <ArrowRight className="w-3 h-3" />
           </Link>
