@@ -672,6 +672,21 @@ export default function FuiteSousDallePage() {
             </div>
           </section>
 
+          {/* Maillage inter-pages */}
+          <section className="bg-primary/5 p-8 rounded-3xl border border-primary/10">
+            <h3 className="font-sora font-bold text-gray-900 mb-4">Nos autres expertises :</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/zones-intervention/nord-rhone" className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <MapPin className="w-5 h-5 text-primary" />
+                <span className="text-sm font-medium">Intervention Nord-Rhône & Villefranche-sur-Saône</span>
+              </Link>
+              <Link href="/diagnostic-infiltration-toiture" className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <Layers className="w-5 h-5 text-primary" />
+                <span className="text-sm font-medium">Diagnostic Infiltration Toiture</span>
+              </Link>
+            </div>
+          </section>
+
           <FAQ
             title="Questions fréquentes sur la fuite sous dalle et canalisation encastrée"
             items={faqItems}
