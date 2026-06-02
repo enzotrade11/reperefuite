@@ -208,7 +208,7 @@ export default function NordRhonePage() {
             <div className="overflow-hidden rounded-2xl shadow-md border border-gray-100 bg-white">
               <Image
                 src="/images/intervention-cailloux-fontaines-piscine.jpg"
-                alt="Recherche de fuite piscine avec caméra RIDGID à Cailloux-sur-Fontaines (69270)"
+                alt="Recherche de fuite piscine avec caméra d'inspection à Cailloux-sur-Fontaines (69270)"
                 width={800}
                 height={600}
                 className="w-full h-64 md:h-80 object-cover m-0 hover:scale-105 transition-transform duration-500"
@@ -223,7 +223,7 @@ export default function NordRhonePage() {
                   Votre <strong>piscine perd de l'eau</strong> de manière anormale ? Le niveau baisse de plusieurs centimètres par jour malgré l'absence d'évaporation ? Vous suspectez une <strong>fuite sur le bassin</strong>, les canalisations enterrées ou le local technique ? <strong>Répère Fuite</strong> intervient à <strong>Cailloux-sur-Fontaines</strong> et dans tout le Nord-Rhône pour localiser précisément l'origine de la perte d'eau.
                 </p>
                 <p>
-                  Sur cette intervention à Cailloux-sur-Fontaines (69270), notre technicien utilise une <strong>caméra d'inspection vidéo RIDGID micro CA-350x</strong> pour examiner l'intérieur des canalisations de la piscine. Cet équipement professionnel nous permet de visualiser en temps réel l'état des tuyaux (fissures, déboîtements, racines) sans aucune <Link href="/methodes-recherche-fuite" className="text-secondary font-medium hover:underline">démolition</Link>.
+                  Sur cette intervention à Cailloux-sur-Fontaines (69270), notre technicien utilise une <strong>caméra d'inspection vidéo endoscopique</strong> pour examiner l'intérieur des canalisations de la piscine. Cet équipement professionnel nous permet de visualiser en temps réel l'état des tuyaux (fissures, déboîtements, racines) sans aucune <Link href="/methodes-recherche-fuite" className="text-secondary font-medium hover:underline">démolition</Link>.
                 </p>
 
                 <h3 className="font-bold text-lg text-gray-900 mt-6 mb-4">🔍 Nos méthodes de détection de fuite piscine</h3>
@@ -296,7 +296,7 @@ export default function NordRhonePage() {
                 </p>
 
                 <div className="bg-primary/5 border border-primary/10 rounded-xl p-5 mb-6 text-gray-800 font-medium">
-                  🔥 Fuite piscine détectée à Cailloux-sur-Fontaines grâce à l'inspection vidéo RIDGID ! Ne laissez pas votre bassin se vider. Contactez Répère Fuite pour un diagnostic complet et sans casse.
+                  🔥 Fuite piscine détectée à Cailloux-sur-Fontaines grâce à l'inspection vidéo ! Ne laissez pas votre bassin se vider. Contactez Répère Fuite pour un diagnostic complet et sans casse.
                 </div>
 
                 <p className="font-semibold text-gray-800 mb-0 flex items-center gap-2">

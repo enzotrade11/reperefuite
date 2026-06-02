@@ -26,14 +26,34 @@ export default function LoireNordPage() {
                 RepereFuite intervient rapidement en Loire-Nord pour résoudre et localiser vos fuites complexes sans casser vos murs, sols ou terrasses. Nous utilisons l'inspection vidéo, la détection électro-acoustique ou encore le gaz traceur.
               </p>
               
-              {/* Espace pour ajouts futurs par l'utilisateur */}
-              <div className="mt-8 p-8 border-2 border-dashed border-gray-200 bg-gray-50 rounded-2xl text-center">
-                <p className="text-gray-500 font-medium">
-                  Espace réservé au contenu futur
-                </p>
-                <p className="text-gray-400 text-sm mt-2">
-                  Vous pourrez ajouter ici du texte détaillé, des photos de vos interventions dans la Loire et des vidéos spécifiques à cette zone.
-                </p>
+              {/* Cas client Lorette */}
+              <div className="mt-12 bg-light p-6 md:p-8 rounded-3xl border border-gray-100 shadow-sm">
+                <h2 className="font-sora text-2xl font-bold text-gray-900 mb-6">
+                  Cas client : Dégât des eaux en appartement à Lorette (42)
+                </h2>
+                <div className="flex flex-col md:flex-row gap-8 items-start">
+                  <div className="flex-1 space-y-4 text-base">
+                    <p>
+                      La photo ci-contre illustre parfaitement l'urgence d'un <strong>dégât des eaux en appartement</strong> : la peinture cloque, le plâtre gonfle, et l'humidité s'installe insidieusement dans les murs. Lors de cette intervention récente à <strong>Lorette (42)</strong>, la fuite était totalement invisible et encastrée.
+                    </p>
+                    <p>
+                      Grâce à nos technologies non destructives, nous avons ciblé l'origine exacte de l'infiltration. Notre expertise en <Link href="/degat-des-eaux-appartement" className="text-primary hover:underline font-semibold">recherche de fuite en appartement</Link> permet de stopper l'aggravation des dommages sans aucune démolition.
+                    </p>
+                    <p>
+                      La source provenait d'une canalisation noyée dans la maçonnerie. Si vous constatez ces symptômes chez vous, ne laissez pas l'eau ronger votre intérieur : découvrez notre solution de <Link href="/fuite-sous-dalle-encastree" className="text-primary hover:underline font-semibold">détection de fuite sous dalle et encastrée</Link>. 
+                    </p>
+                  </div>
+                  <div className="w-full md:w-5/12 shrink-0">
+                    <img 
+                      src="/images/degat-eaux-lorette.jpg" 
+                      alt="Peinture cloquée et mur gonflé suite à un dégât des eaux dans un appartement à Lorette 42" 
+                      className="w-full h-auto rounded-2xl shadow-sm border border-gray-200"
+                    />
+                    <p className="text-xs text-gray-500 mt-2 text-center italic">
+                      Dégâts visibles sur cloisons (Intervention Lorette, 42)
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
