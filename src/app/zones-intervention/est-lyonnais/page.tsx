@@ -313,6 +313,63 @@ export default function EstLyonnaisPage() {
                   </p>
                 </div>
               </div>
+
+              {/* Intervention Pusignan */}
+              <div className="mt-12 overflow-hidden rounded-2xl shadow-md border border-gray-100 bg-white">
+                <Image
+                  src="/images/intervention-pusignan-skimmer.jpg"
+                  alt="Skimmer fissuré détecté lors d'une recherche de fuite piscine à Pusignan (01150)"
+                  width={800}
+                  height={600}
+                  className="w-full h-64 md:h-80 object-cover m-0 hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  quality={80}
+                />
+                <div className="p-6 sm:p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mt-0 mb-4 font-sora">
+                    🏊 Recherche de fuite piscine à Pusignan (69330)
+                  </h2>
+                  <p className="mt-0">
+                    Votre piscine perd de l'eau sans raison apparente ? RepereFuite.fr est intervenu à Pusignan (69330) pour localiser l'origine d'une fuite sur un bassin résidentiel. Le coupable : un <strong>skimmer fissuré</strong>, invisible à l'œil nu, détecté grâce à nos colorants traceurs fluorescents.
+                  </p>
+                  <p>
+                    La fissure — clairement visible sur la photo ci-dessus grâce à la fluorescéine jaune — provoquait une perte d'eau constante, jour et nuit. Sans diagnostic précis, ce type de fuite peut passer des mois inaperçu et entraîner des dégâts importants autour du bassin.
+                  </p>
+                  <p>
+                    Nous intervenons régulièrement à Pusignan et dans toutes les communes proches : <strong>Jonage</strong>, <strong>Meyzieu</strong>, <strong>Genas</strong>, <strong>Colombier-Saugnieu</strong> et <strong>Saint-Laurent-de-Mure</strong>. Une fuite de piscine dans ce secteur ? On est chez vous rapidement.
+                  </p>
+
+                  <h3 className="font-bold text-lg text-gray-900 mt-6 mb-4">🔬 Comment on a trouvé la fuite ?</h3>
+                  <ul className="list-none pl-0 space-y-4 my-6">
+                    <li className="flex items-start">
+                      <span className="mr-3 text-xl leading-tight">💧</span>
+                      <div>
+                        <strong>Test colorant traceur :</strong> Injection de fluorescéine pour révéler visuellement le trajet de la fuite sur le skimmer.
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3 text-xl leading-tight">💨</span>
+                      <div>
+                        <strong>Mise sous pression :</strong> Contrôle de l'étanchéité des canalisations reliées au skimmer pour confirmer l'origine exacte.
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3 text-xl leading-tight">📑</span>
+                      <div>
+                        <strong>Rapport détaillé :</strong> Un compte-rendu complet remis au propriétaire, avec photos et localisation précise, pour faciliter la réparation.
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div className="bg-primary/5 border border-primary/10 rounded-xl p-5 mb-6 text-gray-800 font-medium">
+                    💡 Une fuite de piscine non détectée peut coûter plusieurs centaines de litres par jour. Un diagnostic rapide, c'est une réparation ciblée — et une facture d'eau maîtrisée.
+                  </div>
+
+                  <p className="font-semibold text-gray-800 mb-0 flex items-center gap-2">
+                    📞 Piscine qui se vide à Pusignan, Jonage ou Meyzieu ? <Link href="/contact" className="text-accent underline font-bold hover:text-red-600 transition-colors">Contactez-nous pour un diagnostic rapide !</Link>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
