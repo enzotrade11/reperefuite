@@ -112,6 +112,63 @@ export default function NordDeLyonPage() {
                   </p>
                 </div>
               </div>
+              {/* Intervention Villefranche-sur-Saône */}
+              <div className="mt-12 overflow-hidden rounded-2xl shadow-md border border-gray-100 bg-white">
+                <Image
+                  src="/images/intervention-villefranche-solin.jpg"
+                  alt="Solin défectueux détecté lors d'une recherche de fuite toiture à Villefranche-sur-Saône (69400)"
+                  width={800}
+                  height={600}
+                  className="w-full h-64 md:h-80 object-cover m-0 hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  quality={80}
+                />
+                <div className="p-6 sm:p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mt-0 mb-4 font-sora">
+                    🏠 Recherche de fuite toiture à Villefranche-sur-Saône (69400)
+                  </h2>
+                  <p className="mt-0">
+                    Des taches d'humidité au plafond après chaque pluie ? RepereFuite.fr est intervenu à Villefranche-sur-Saône pour localiser une <Link href="/diagnostic-infiltration-toiture" className="text-secondary font-medium hover:underline">infiltration d'eau par la toiture</Link>. Le diagnostic a révélé un <strong>solin défectueux</strong> au pied d'une souche de cheminée — visible sur la photo grâce au colorant traceur vert.
+                  </p>
+                  <p>
+                    Ce type de désordre est fréquent sur les maisons du secteur Beaujolais : le mortier de solin se décolle ou se fissure avec le temps, laissant l'eau s'infiltrer discrètement et abîmer la charpente, l'isolation et les plafonds.
+                  </p>
+
+                  <h3 className="font-bold text-lg text-gray-900 mt-6 mb-4">🔬 Comment on a localisé l'infiltration ?</h3>
+                  <ul className="list-none pl-0 space-y-4 my-6">
+                    <li className="flex items-start">
+                      <span className="mr-3 text-xl leading-tight">🎨</span>
+                      <div>
+                        <strong>Colorant traceur fluorescent :</strong> Injection au niveau des solins pour visualiser le cheminement exact de l'eau.
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3 text-xl leading-tight">🌡️</span>
+                      <div>
+                        <strong>Thermographie infrarouge :</strong> Détection des zones humides cachées dans la charpente et sous la toiture, sans démontage.
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3 text-xl leading-tight">📑</span>
+                      <div>
+                        <strong>Rapport d'expertise :</strong> Document complet remis avec photos géolocalisées, pour faciliter la prise en charge par votre <Link href="/contact" className="text-secondary font-medium hover:underline">assurance habitation</Link>.
+                      </div>
+                    </li>
+                  </ul>
+
+                  <p>
+                    Nous intervenons à Villefranche-sur-Saône et dans toutes les communes proches : <strong>Limas</strong>, <strong>Gleizé</strong>, <strong>Arnas</strong>, <strong>Anse</strong> et <strong>Belleville-en-Beaujolais</strong>. Un secteur que nous connaissons bien pour ses toitures en tuiles canal et ses maisons anciennes.
+                  </p>
+
+                  <div className="bg-primary/5 border border-primary/10 rounded-xl p-5 mb-6 text-gray-800 font-medium">
+                    💡 Une infiltration non traitée peut rapidement endommager charpente, isolation et plafonds. Un diagnostic précis évite des travaux bien plus coûteux.
+                  </div>
+
+                  <p className="font-semibold text-gray-800 mb-0 flex items-center gap-2">
+                    📞 Infiltration toiture à Villefranche, Limas ou Gleizé ? <Link href="/contact" className="text-accent underline font-bold hover:text-red-600 transition-colors">Contactez-nous pour un diagnostic rapide !</Link>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
