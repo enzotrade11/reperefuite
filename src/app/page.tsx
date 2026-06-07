@@ -10,6 +10,7 @@ import WhySansDestruction from './WhySansDestruction'
 import CTABanner from '@/components/sections/CTABanner'
 import MiddleCTA from '@/components/sections/MiddleCTA'
 import JsonLd from '@/components/seo/JsonLd'
+import HomeFAQ, { homeFaqItems } from '@/components/sections/HomeFAQ'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 import FadeIn from '@/components/ui/FadeIn'
 import Link from 'next/link'
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <JsonLd />
+      <JsonLd faqItems={homeFaqItems} />
       <Hero />
       <AssurancesCarousel />
 
@@ -95,6 +96,7 @@ export default function HomePage() {
       <ZoneIntervention />
       <SituationsLinks />
       <WhySansDestruction />
+      <HomeFAQ />
       <CTABanner />
     </>
   )
