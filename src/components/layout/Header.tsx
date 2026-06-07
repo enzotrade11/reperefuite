@@ -33,7 +33,7 @@ export default function Header() {
           <span className="inline-block mr-2 text-secondary font-bold">✓</span> Rapport pour assurance remis sous 24/48h
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-[106px] lg:h-[178px]">
+          <div className="flex items-center justify-between h-[106px] lg:h-[148px]">
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0">
               <Image
@@ -41,7 +41,7 @@ export default function Header() {
                 alt="RepereFuite - Recherche de fuite sans destruction"
                 width={460}
                 height={690}
-                className="h-[106px] lg:h-[178px] w-auto object-contain"
+                className="h-[106px] lg:h-[148px] w-auto object-contain"
                 priority
               />
             </Link>
@@ -101,7 +101,7 @@ export default function Header() {
       <MobileMenu isOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
 
       {/* Spacer */}
-      <div className="h-[138px] lg:h-[210px]" />
+      <div className="h-[138px] lg:h-[180px]" />
     </>
   )
 }
