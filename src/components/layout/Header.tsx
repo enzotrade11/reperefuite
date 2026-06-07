@@ -78,13 +78,13 @@ export default function Header() {
             </nav>
 
             {/* CTA + Mobile toggle */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <a
                 href={siteConfig.phoneTel}
-                className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-accent text-white text-sm font-semibold rounded-lg hover:bg-red-600 transition-colors shadow-sm"
+                className="inline-flex items-center gap-1.5 px-3 py-2 sm:px-4 bg-accent text-white text-xs sm:text-sm font-bold rounded-lg hover:bg-red-600 transition-colors shadow-sm"
               >
-                <Phone className="w-4 h-4" />
-                {siteConfig.phoneDisplay}
+                <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+                <span>{siteConfig.phoneDisplay}</span>
               </a>
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
