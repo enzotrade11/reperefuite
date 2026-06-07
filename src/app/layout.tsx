@@ -1,19 +1,21 @@
 import type { Metadata } from 'next'
-import { Space_Grotesk, Inter } from 'next/font/google'
+import { Poppins, Lato } from 'next/font/google'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import FloatingCTA from '@/components/ui/FloatingCTA'
 import GoogleReviews from '@/components/sections/GoogleReviews'
 import '@/styles/globals.css'
 
-const spaceGrotesk = Space_Grotesk({
+const poppins = Poppins({
   subsets: ['latin'],
+  weight: ['400', '600', '700'],
   variable: '--font-heading',
   display: 'swap',
 })
 
-const inter = Inter({
+const lato = Lato({
   subsets: ['latin'],
+  weight: ['400', '700'],
   variable: '--font-inter',
   display: 'swap',
 })
@@ -61,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={`${spaceGrotesk.variable} ${inter.variable}`}>
+    <html lang="fr" className={`${poppins.variable} ${lato.variable}`}>
       <body className="font-sans">
         <Header />
         <main>{children}</main>
