@@ -3,6 +3,7 @@ import { Space_Grotesk, Inter } from 'next/font/google'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import FloatingCTA from '@/components/ui/FloatingCTA'
+import GoogleReviews from '@/components/sections/GoogleReviews'
 import '@/styles/globals.css'
 
 const spaceGrotesk = Space_Grotesk({
@@ -64,6 +65,7 @@ export default function RootLayout({
       <body className="font-sans">
         <Header />
         <main>{children}</main>
+        <GoogleReviews />
         <Footer />
         <FloatingCTA />
       </body>
