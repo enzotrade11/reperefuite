@@ -38,18 +38,18 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative text-white overflow-hidden min-h-[600px] lg:min-h-[700px] flex items-center">
-        {/* Background image */}
+      <section className="relative text-white overflow-hidden min-h-[600px] lg:min-h-[700px] flex items-center bg-slate-900">
+        {/* Background image - taille normale, non zoomée */}
         <Image
-          src="/images/hero-thermal.jpg"
-          alt=""
+          src="/images/hero-bg-piscine-blur.jpg"
+          alt="Technicien RepereFuite en intervention détection fuite piscine"
           fill
-          className="object-cover object-center"
+          className="object-contain object-top opacity-40"
           priority
           quality={90}
         />
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-blue-900/80" />
+        {/* Dark overlay - style serrurier-urgence-centre.fr */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-slate-900/60 to-blue-900/70" />
 
         {/* Content */}
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
