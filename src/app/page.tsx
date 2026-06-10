@@ -35,7 +35,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="prose prose-blue max-w-none">
             <h2 className="font-sora text-3xl font-bold text-gray-900 mb-8 border-b pb-4">
-              Expert Recherche de Fuite d&apos;Eau Sans Destruction — Lyon, Meyzieu, Bron, Décines, Vaulx-en-Velin
+              Expert Recherche de Fuite d&apos;Eau Sans Destruction — Lyon, Meyzieu, Bron, Décines, Vaulx-en-Velin, 50 km autour de Lyon
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed italic border-l-4 border-primary pl-6 py-2">
               Une fuite d&apos;eau invisible peut causer des dégâts considérables avant même que la première goutte ne soit visible. À <strong>Lyon</strong>, <strong>Meyzieu</strong>, <strong>Bron</strong> et dans tout l&apos;Est Lyonnais, Répère Fuite intervient avec des technologies de pointe pour localiser l&apos;origine du sinistre sans rien casser.
@@ -81,8 +81,11 @@ export default function HomePage() {
                 <p className="text-gray-700 mb-4">
                   Basés au cœur de l&apos;Est Lyonnais, nous intervenons quotidiennement à <strong>Lyon, Villeurbanne, Bron, Meyzieu, Décines-Charpieu, Chassieu, Genas, Saint-Priest, Vaulx-en-Velin, Rillieux-la-Pape, Caluire-et-Cuire</strong>.
                 </p>
-                <p className="text-gray-700 mb-6">
+                <p className="text-gray-700 mb-4">
                   Nous couvrons également le Nord Isère (<strong>Bourgoin-Jallieu, L&apos;Isle-d&apos;Abeau</strong>) et le Sud de l&apos;Ain (<strong>Miribel, Beynost, Ambérieu-en-Bugey</strong>).
+                </p>
+                <p className="text-sm font-extrabold tracking-widest text-primary uppercase mb-6 border-t border-primary/20 pt-4">
+                  Intervention dans le RHÔNE · L&apos;ISÈRE · L&apos;AIN · ET LA LOIRE
                 </p>
                 <Link href="/zones-intervention" className="inline-flex items-center text-primary font-bold hover:gap-2 transition-all">
                   Consulter notre zone d&apos;intervention <ArrowRight className="w-4 h-4 ml-1" />

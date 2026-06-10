@@ -28,8 +28,17 @@ export default function Header() {
             : 'bg-white'
         )}
       >
+        {/* Barre téléphone mobile uniquement */}
+        <a
+          href={siteConfig.phoneTel}
+          className="lg:hidden flex items-center justify-center gap-2 w-full bg-accent text-white text-sm font-bold py-2.5 px-4 hover:bg-red-600 transition-colors"
+        >
+          <Phone className="w-4 h-4 shrink-0" />
+          Appeler le {siteConfig.phoneDisplay}
+        </a>
+
         {/* Banner assurance */}
-        <div className="w-full bg-slate-900 text-blue-50 text-xs sm:text-sm font-medium text-center py-1.5 px-4 tracking-wide">
+        <div className="hidden sm:block w-full bg-slate-900 text-blue-50 text-xs sm:text-sm font-medium text-center py-1.5 px-4 tracking-wide">
           <span className="inline-block mr-2 text-secondary font-bold">✓</span> Rapport pour assurance remis sous 24/48h
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
