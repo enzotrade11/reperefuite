@@ -63,7 +63,7 @@ export default function Footer() {
                 className="flex items-center gap-2 hover:text-secondary transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                {siteConfig.email}
+                Nous écrire
               </a>
             </div>
           </div>

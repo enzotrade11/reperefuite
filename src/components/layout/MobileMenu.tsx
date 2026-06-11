@@ -90,7 +90,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             className="flex items-center gap-3 px-4 py-3 text-gray-600 hover:text-primary"
           >
             <Mail className="w-5 h-5" />
-            {siteConfig.email}
+            Nous écrire
           </a>
         </nav>
       </div>
