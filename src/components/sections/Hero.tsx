@@ -88,7 +88,9 @@ export default function Hero() {
                   <span className="flex items-center gap-1"><Check className="w-3.5 h-3.5 text-secondary" />Intervention 24–48h</span>
                 </div>
               </FadeIn>
-             {/* ---- Colonne droite : Google Form intégré ---- */}
+            </div>
+
+            {/* ---- Colonne droite : Google Form intégré ---- */}
             <FadeIn delay={0.15}>
               <div className="relative">
                 {/* Glow effect */}
@@ -125,7 +127,6 @@ export default function Hero() {
                   </iframe>
                 </div>
               </div>
-            </FadeIn>       </div>
             </FadeIn>
 
           </div>
