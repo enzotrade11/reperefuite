@@ -59,7 +59,7 @@ export default function QuickQuote() {
               <h3 className="font-sora text-lg font-bold text-white">Votre demande de devis</h3>
             </div>
             <iframe
-              src="https://reperefuite.s.gy/formulaire?embedded=true"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfSRKE2k4UyKNwExLOBnN8pHfO1VLLulEaVIaABdho1QSFybA/viewform?embedded=true"
               width="100%"
               height="520"
               frameBorder="0"
