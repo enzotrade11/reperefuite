@@ -44,7 +44,7 @@ export default function Hero() {
           src="/images/hero-bg-piscine-blur.jpg"
           alt="Technicien RepereFuite en intervention détection fuite piscine"
           fill
-          className="object-contain object-top opacity-40"
+          className="object-contain object-center opacity-50"
           priority
           quality={90}
         />
