@@ -60,6 +60,7 @@ export default function Hero() {
                     { icon: PoolLadder, text: 'Pertes de niveau piscine' },
                     { icon: Droplets, text: 'Canalisations enterrées' },
                     { icon: Gauge,    text: 'Surconsommation / fuite après compteur' },
+                    { icon: ShieldCheck, text: 'Toiture / terrasse' },
                   ].map(({ icon: Icon, text }) => (
                     <li key={text} className="flex items-center gap-3 text-blue-100 text-sm">
                       <span className="w-7 h-7 rounded-full bg-secondary/20 flex items-center justify-center shrink-0">
