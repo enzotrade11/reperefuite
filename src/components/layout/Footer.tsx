@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Mail, MapPin, Home, Shovel } from 'lucide-react'
+import { Phone, Mail, MapPin, Home, Shovel, ExternalLink } from 'lucide-react'
 import { siteConfig } from '@/data/siteConfig'
 import PoolLadder from '@/components/ui/icons/PoolLadder'
 
@@ -94,14 +94,34 @@ export default function Footer() {
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-secondary" />
                 <div>
-                  <p>
-                    Est lyonnais (Vaulx-en-Velin, Décines, Meyzieu, Bron)
-                  </p>
+                  <p>Est lyonnais (Vaulx-en-Velin, Décines, Meyzieu, Bron)</p>
                   <p>Nord Isère</p>
                   <p>Sud Ain</p>
                 </div>
               </div>
               <p className="text-gray-400 mt-4">{siteConfig.zoneDetail}</p>
+
+              {/* Lien Google Maps — signal GBP + UX */}
+              <Link
+                href={siteConfig.google.businessUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-secondary hover:text-secondary/80 transition-colors mt-3"
+              >
+                <MapPin className="w-3.5 h-3.5" />
+                Voir sur Google Maps
+                <ExternalLink className="w-3 h-3" />
+              </Link>
+
+              {/* Adresse NAP en texte brut — visible par les crawlers SEO */}
+              {siteConfig.address.streetAddress && (
+                <address className="not-italic text-gray-500 text-xs mt-3 leading-relaxed">
+                  <span className="block">{siteConfig.address.streetAddress}</span>
+                  <span className="block">
+                    {siteConfig.address.postalCode} {siteConfig.address.addressLocality}
+                  </span>
+                </address>
+              )}
             </div>
           </div>
         </div>

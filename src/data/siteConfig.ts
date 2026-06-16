@@ -1,5 +1,7 @@
 export const siteConfig = {
   name: "RepereFuite",
+  // Nom exact tel qu'il apparaît sur la fiche Google Business
+  gbpName: "RepèreFuite - Recherche de fuite & Détection non destructive",
   tagline: "Recherche de fuite sans destruction",
   fullTagline:
     "Spécialisé dans la localisation de fuites d'eau dans les habitations, piscines et canalisations enterrées, sans destruction inutile.",
@@ -11,6 +13,49 @@ export const siteConfig = {
   zone: "Est lyonnais – Nord Isère – Sud Ain",
   zoneDetail:
     "Intervention dans un rayon d'environ 50 km autour de Lyon Est.",
+
+  // ─── Adresse NAP (Name, Address, Phone) ────────────────────────────────────
+  // ⚠️ IMPORTANT : Ces données doivent être identiques à celles de votre fiche GBP
+  address: {
+    streetAddress: "",          // TODO: Remplir si adresse physique sur GBP (ex: "12 Rue des Lilas")
+    postalCode: "69000",        // TODO: Mettre le vrai code postal de la fiche GBP
+    addressLocality: "Lyon",
+    addressRegion: "Auvergne-Rhône-Alpes",
+    addressCountry: "FR",
+  },
+
+  // ─── Coordonnées géographiques ──────────────────────────────────────────────
+  geo: {
+    latitude: 45.764,
+    longitude: 4.8357,
+  },
+
+  // ─── Google Business Profile ────────────────────────────────────────────────
+  google: {
+    // URL directe vers la fiche GBP (format maps.app.goo.gl ou maps.google.com)
+    // TODO: Remplacer par l'URL réelle de votre fiche Google Maps
+    businessUrl:
+      "https://www.google.com/maps/place/Rep%C3%A8reFuite+-+Recherche+de+fuite+%26+D%C3%A9tection+non+destructive",
+    // URL pour laisser un avis (format: https://search.google.com/local/writereview?placeid=VOTRE_PLACE_ID)
+    // TODO: Remplacer VOTRE_PLACE_ID par votre vrai Place ID Google
+    reviewUrl:
+      "https://www.google.com/search?q=Rep%C3%A8reFuite+-+Recherche+de+fuite+%26+D%C3%A9tection+non+destructive#lrd=,1,,,",
+    // Place ID Google (https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder)
+    // TODO: Remplir avec votre vrai Place ID
+    placeId: "",
+    // URL pour embed Google Maps dans le site
+    // TODO: Générer depuis Google Maps > Partager > Intégrer une carte
+    embedUrl: "",
+  },
+
+  // ─── Avis Google (à synchroniser avec la fiche GBP) ────────────────────────
+  reviews: {
+    ratingValue: "5",     // Note moyenne GBP
+    reviewCount: "8",     // Nombre total d'avis GBP (TODO: mettre à jour)
+    bestRating: "5",
+    worstRating: "1",
+  },
+
   communes: {
     rhone: [
       "Vaulx-en-Velin",

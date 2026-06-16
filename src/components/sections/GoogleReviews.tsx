@@ -1,10 +1,9 @@
-import { Star, ExternalLink } from 'lucide-react'
+import { Star, ExternalLink, PenLine } from 'lucide-react'
 import Link from 'next/link'
-
-const GOOGLE_PROFILE_URL =
-  'https://www.google.com/search?q=Rep%C3%A8reFuite+-+Recherche+de+fuite+%26+D%C3%A9tection+non+destructive&stick=H4sIAAAAAAAA_-NgU1I1qEg0NTI1T0tKSQYSSYZG5lYGFUbmFqYGKeaJRoZJSYkpacmLWO2CUgsOryhKdSvNLElV0FUISk3OSC0CYoWUVIU0sKCagsvhlSWpySWZ-XkKeUCcklpcUlQK5JelAgCWjeDCagAAAA&hl=fr'
+import { siteConfig } from '@/data/siteConfig'
 
 // ⚠️ TODO : Remplacez ces données par vos vrais avis Google Business
+// Vous pouvez copier les vrais textes depuis votre fiche GBP
 const reviews = [
   {
     author: 'Sophie D.',
@@ -42,11 +41,14 @@ function GoogleGLogo() {
 
 // Server Component — zero JS, léger pour Core Web Vitals
 export default function GoogleReviews() {
+  const { ratingValue, reviewCount } = siteConfig.reviews
+  const { businessUrl, reviewUrl } = siteConfig.google
+
   return (
     <section className="py-12 bg-light border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Badge global */}
+        {/* En-tête : badge global + actions */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
           <div className="flex items-center gap-3">
             <GoogleGLogo />
@@ -55,20 +57,38 @@ export default function GoogleReviews() {
                 <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="text-lg font-bold text-gray-900">5,0</span>
-            <span className="text-sm text-gray-500">sur Google</span>
+            <span className="text-lg font-bold text-gray-900">{ratingValue}</span>
+            <span className="text-sm text-gray-500">
+              · {reviewCount} avis sur Google
+            </span>
           </div>
-          <Link
-            href={GOOGLE_PROFILE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
-          >
-            Voir tous nos avis <ExternalLink className="w-3.5 h-3.5" />
-          </Link>
+
+          {/* Boutons d'action GBP */}
+          <div className="flex flex-wrap items-center gap-3">
+            {/* Lire tous les avis */}
+            <Link
+              href={businessUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+            >
+              Voir tous les avis <ExternalLink className="w-3.5 h-3.5" />
+            </Link>
+
+            {/* CTA : Laisser un avis — signal GBP fort */}
+            <Link
+              href={reviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold bg-primary text-white px-4 py-2 rounded-full hover:bg-primary/90 transition-colors"
+            >
+              <PenLine className="w-3.5 h-3.5" />
+              Laisser un avis
+            </Link>
+          </div>
         </div>
 
-        {/* 3 cartes statiques */}
+        {/* 3 cartes d'avis */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {reviews.map((review, index) => (
             <div
@@ -97,6 +117,23 @@ export default function GoogleReviews() {
             </div>
           ))}
         </div>
+
+        {/* Incitation à laisser un avis — signal de confiance */}
+        <div className="mt-8 text-center">
+          <p className="text-sm text-gray-500 mb-3">
+            Vous avez fait appel à nous ? Partagez votre expérience, cela aide d&apos;autres particuliers à nous trouver.
+          </p>
+          <Link
+            href={reviewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary border border-primary/30 px-5 py-2.5 rounded-full hover:bg-primary/5 transition-colors"
+          >
+            <GoogleGLogo />
+            Déposer mon avis sur Google
+          </Link>
+        </div>
+
       </div>
     </section>
   )
