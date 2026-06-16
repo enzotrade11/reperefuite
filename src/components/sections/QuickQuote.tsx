@@ -53,8 +53,8 @@ export default function QuickQuote() {
             </div>
           </div>
 
-          {/* Google Form droite */}
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+          {/* Google Form droite — desktop uniquement */}
+          <div className="hidden lg:block bg-white rounded-2xl shadow-2xl overflow-hidden">
             <div className="bg-gradient-to-r from-primary to-blue-700 px-6 py-4">
               <h3 className="font-sora text-lg font-bold text-white">Votre demande de devis</h3>
             </div>
@@ -70,6 +70,25 @@ export default function QuickQuote() {
             >
               Chargement…
             </iframe>
+          </div>
+
+          {/* CTA mobile — à la place de l'iframe */}
+          <div className="lg:hidden bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center">
+            <p className="text-white font-bold text-lg mb-2">Demandez votre devis</p>
+            <p className="text-blue-200 text-sm mb-5">Réponse sous 2h — Gratuit &amp; sans engagement</p>
+            <a
+              href={siteConfig.phoneTel}
+              className="flex items-center justify-center gap-2 bg-accent hover:bg-red-600 transition-colors text-white font-bold px-6 py-4 rounded-xl shadow-lg w-full mb-3"
+            >
+              <Phone className="w-5 h-5" />
+              Appeler — {siteConfig.phoneDisplay}
+            </a>
+            <a
+              href="/contact"
+              className="flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 transition-colors text-white font-semibold px-6 py-3 rounded-xl text-sm w-full"
+            >
+              Formulaire de contact →
+            </a>
           </div>
 
         </div>

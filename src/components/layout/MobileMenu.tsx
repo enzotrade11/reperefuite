@@ -31,7 +31,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Drawer */}
       <div
         className={cn(
-          'fixed top-16 right-0 w-80 max-w-[85vw] h-[calc(100vh-4rem)] bg-white z-50 lg:hidden transform transition-transform duration-300 ease-in-out shadow-xl overflow-y-auto',
+          'fixed top-0 right-0 w-[85vw] max-w-sm h-full bg-white z-50 lg:hidden transform transition-transform duration-300 ease-in-out shadow-2xl overflow-y-auto pt-[120px]',
           isOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >

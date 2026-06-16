@@ -5,10 +5,30 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Empêche le défilement horizontal sur mobile */
+    overflow-x: hidden;
+    /* Support des safe areas (iPhone avec encoche, Android avec barre de navigation) */
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   }
 
   body {
     @apply text-gray-800 antialiased;
+    /* Bloque le débordement horizontal — corrige les problèmes mobiles */
+    overflow-x: hidden;
+    /* Meilleur scroll sur iOS */
+    -webkit-overflow-scrolling: touch;
+    /* Évite le zoom accidentel sur double-tap sur iOS */
+    touch-action: manipulation;
+  }
+
+  /* Améliore les touch targets sur mobile (WCAG AA = min 44x44px) */
+  button, a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Garantit que les images ne dépassent pas sur mobile */
+  img {
+    max-width: 100%;
   }
 }
 

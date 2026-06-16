@@ -26,7 +26,7 @@ export default function Hero() {
 
         {/* Content */}
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
             {/* ---- Colonne gauche : texte ---- */}
             <div>
@@ -91,8 +91,30 @@ export default function Hero() {
               </FadeIn>
             </div>
 
-            {/* ---- Colonne droite : Google Form intégré ---- */}
-            <FadeIn delay={0.15}>
+            {/* ---- Colonne droite : Google Form (desktop) + CTA mobile ---- */}
+            {/* Sur mobile : CTA simplifié (l'iframe est trop lourd pour les petits écrans) */}
+            <div className="block lg:hidden">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center">
+                <p className="text-white font-bold text-lg mb-2">Devis rapide &amp; gratuit</p>
+                <p className="text-blue-200 text-sm mb-5">Réponse du technicien sous 2h</p>
+                <a
+                  href={siteConfig.phoneTel}
+                  className="flex items-center justify-center gap-2 bg-accent hover:bg-red-600 transition-colors text-white font-bold px-6 py-4 rounded-xl shadow-lg shadow-accent/30 text-base w-full mb-3"
+                >
+                  <Phone className="w-5 h-5" />
+                  Appeler — {siteConfig.phoneDisplay}
+                </a>
+                <a
+                  href="/contact"
+                  className="flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 transition-colors text-white font-semibold px-6 py-3 rounded-xl text-sm w-full"
+                >
+                  Formulaire de contact →
+                </a>
+              </div>
+            </div>
+
+            {/* Sur desktop : iframe Google Form */}
+            <FadeIn delay={0.15} className="hidden lg:block">
               <div className="relative">
                 {/* Glow effect */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-secondary/40 to-primary/40 rounded-2xl blur-lg opacity-60" />
